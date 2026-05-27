@@ -38,7 +38,7 @@ export default function ProjectDetail() {
   const id = params?.id as string;
   const { locale } = useLanguage();
 
-  const project = projects.find((p) => p.id === id);
+  const project: any = projects.find((p) => p.id === id);
 
   if (!project) {
     return (
