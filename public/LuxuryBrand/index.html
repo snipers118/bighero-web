@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ย่านลิเภา | ศิลปะแห่งความประณีต — เครื่องจักสานชั้นสูงแห่งนครศรีธรรมราช</title>
+  <meta name="description" content="เครื่องจักสานย่านลิเภา งานฝีมือชั้นสูงที่สืบทอดกว่า 300 ปี จากนครศรีธรรมราช กระเป๋า กล่องเครื่องประดับ กำไล สั่งทำพิเศษได้" />
+  <meta property="og:title" content="ย่านลิเภา | ศิลปะแห่งความประณีต" />
+  <meta property="og:description" content="เครื่องจักสานย่านลิเภา งานฝีมือชั้นสูงที่สืบทอดจากรุ่นสู่รุ่น ทรงคุณค่าเหนือกาลเวลา" />
+  <meta property="og:image" content="images/hero-bg.png" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1A1008" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#FFF9E6',
+              100: '#FFF0BF',
+              200: '#FFE080',
+              300: '#FFD040',
+              400: '#D4A843',
+              500: '#B8860B',
+              600: '#96700A',
+              700: '#6B4F07',
+              800: '#3D2E04',
+              900: '#1A1302',
+            },
+            luxury: {
+              dark: '#1A1008',
+              brown: '#2C1A0E',
+              cream: '#F5F0E8',
+              ivory: '#FFFEF9',
+            },
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            thai: ['Sarabun', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { scroll-behavior: smooth; }
+    body { font-family: 'Sarabun', sans-serif; }
+
+    /* Fade in on scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gold shimmer animation */
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .gold-shimmer {
+      background: linear-gradient(90deg, #B8860B, #FFD700, #D4A843, #FFD700, #B8860B);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    /* Hero overlay */
+    .hero-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(26, 16, 8, 0.6) 0%,
+        rgba(26, 16, 8, 0.4) 40%,
+        rgba(26, 16, 8, 0.7) 100%
+      );
+    }
+
+    /* Product card hover */
+    .product-card img {
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .product-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Divider */
+    .gold-divider {
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #D4A843, transparent);
+    }
+
+    /* Button glow */
+    .btn-gold {
+      background: linear-gradient(135deg, #B8860B, #D4A843);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+    }
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #D4A843, #FFD700);
+      box-shadow: 0 6px 25px rgba(184, 134, 11, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Parallax-like slow bg */
+    .hero-bg {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Decorative corner borders */
+    .corner-border::before,
+    .corner-border::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-color: #D4A843;
+      border-style: solid;
+    }
+    .corner-border::before {
+      top: -1px;
+      left: -1px;
+      border-width: 2px 0 0 2px;
+    }
+    .corner-border::after {
+      bottom: -1px;
+      right: -1px;
+      border-width: 0 2px 2px 0;
+    }
+
+    /* Scroll indicator */
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    .scroll-indicator {
+      animation: bounce-slow 2s ease-in-out infinite;
+    }
+
+    /* ===== PRELOADER ===== */
+    .preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #1A1008;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    .preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .preloader-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #D4A843;
+      letter-spacing: 0.2em;
+      margin-bottom: 2rem;
+    }
+    .preloader-bar {
+      width: 120px;
+      height: 2px;
+      background: rgba(212, 168, 67, 0.2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .preloader-bar-inner {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #B8860B, #FFD700);
+      animation: preload-fill 1.8s ease-in-out forwards;
+    }
+    @keyframes preload-fill {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.25rem 2rem;
+      transition: all 0.4s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(26, 16, 8, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 0.75rem 2rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #D4A843;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #D4A843;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(26, 16, 8, 0.98);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .mobile-nav-link {
+      font-family: 'Sarabun', sans-serif;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.8);
+      letter-spacing: 0.15em;
+      transition: color 0.3s ease;
+    }
+    .mobile-nav-link:hover {
+      color: #D4A843;
+    }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 900;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #B8860B, #D4A843);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(184, 134, 11, 0.6);
+    }
+
+    /* ===== TESTIMONIAL CARDS ===== */
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(212, 168, 67, 0.15);
+      transition: all 0.4s ease;
+    }
+    .testimonial-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(212, 168, 67, 0.3);
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body class="bg-luxury-ivory text-luxury-dark">
+
+  <!-- ============================================================ -->
+  <!-- PRELOADER -->
+  <!-- ============================================================ -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-logo">ย่านลิเภา</div>
+    <p class="font-thai text-gray-500 text-xs tracking-[0.3em] uppercase mb-6">Nakhon Si Thammarat</p>
+    <div class="preloader-bar">
+      <div class="preloader-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR -->
+  <!-- ============================================================ -->
+  <nav id="navbar" class="navbar">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="font-display text-xl text-gold-400 tracking-wider">ย่านลิเภา</a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#hero" class="nav-link font-thai">หน้าแรก</a>
+        <a href="#craftsmanship" class="nav-link font-thai">ความประณีต</a>
+        <a href="#products" class="nav-link font-thai">คอลเลกชัน</a>
+        <a href="#testimonials" class="nav-link font-thai">เสียงจากลูกค้า</a>
+        <a href="#contact" class="btn-gold text-white font-thai text-sm px-6 py-2 rounded-full">ติดต่อเรา</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="เมนู">
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">หน้าแรก</a>
+    <a href="#craftsmanship" class="mobile-nav-link" onclick="closeMobileMenu()">ความประณีต</a>
+    <a href="#products" class="mobile-nav-link" onclick="closeMobileMenu()">คอลเลกชัน</a>
+    <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">เสียงจากลูกค้า</a>
+    <a href="#contact" class="btn-gold text-white font-thai px-8 py-3 rounded-full mt-4" onclick="closeMobileMenu()">ติดต่อเรา</a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- [1] HERO SECTION -->
+  <!-- ============================================================ -->
+  <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 hero-bg" style="background-image: url('images/hero-bg.png');"></div>
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <!-- Decorative top line -->
+      <div class="flex justify-center mb-8">
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Sub-brand -->
+      <p class="font-thai text-gold-400 tracking-[0.4em] uppercase text-sm mb-6 opacity-90">
+        Yan Lipao — Nakhon Si Thammarat
+      </p>
+
+      <!-- Headline -->
+      <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        อัตลักษณ์แห่งนครฯ<br />
+        <span class="gold-shimmer">ศิลปะแห่งความประณีต</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="font-thai text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+        เครื่องจักสานย่านลิเภา งานฝีมือชั้นสูงที่สืบทอดจากรุ่นสู่รุ่น<br class="hidden md:block" />
+        ทรงคุณค่าเหนือกาลเวลา
+      </p>
+
+      <!-- CTA Button -->
+      <a href="#products" class="btn-gold inline-block text-white font-thai font-semibold px-10 py-4 rounded-full text-lg tracking-wide">
+        ชมคอลเลกชันของเรา
+      </a>
+
+      <!-- Decorative bottom line -->
+      <div class="flex justify-center mt-12">
+        <div class="gold-divider"></div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+      <svg class="w-6 h-6 text-gold-400 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [2] THE CRAFTSMANSHIP (Split Screen) -->
+  <!-- ============================================================ -->
+  <section id="craftsmanship" class="bg-luxury-brown">
+    <div class="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+      <!-- Left: Image -->
+      <div class="relative overflow-hidden h-[50vh] lg:h-auto">
+        <img
+          src="images/Gemini_Generated_Image_yvniezyvniezyvni.png"
+          alt="ช่างฝีมือกำลังสานย่านลิเภา"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-luxury-brown/50 hidden lg:block"></div>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="flex items-center px-8 md:px-16 lg:px-20 py-16 lg:py-0">
+        <div class="fade-up max-w-lg">
+          <!-- Section label -->
+          <p class="text-gold-400 tracking-[0.3em] uppercase text-xs mb-6 font-thai">The Craftsmanship</p>
+
+          <!-- Heading -->
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-white font-bold leading-tight mb-8">
+            กว่าจะมาเป็น<br />
+            <span class="text-gold-400">กระเป๋า 1 ใบ...</span>
+          </h2>
+
+          <!-- Decorative line -->
+          <div class="gold-divider mb-8"></div>
+
+          <!-- Description -->
+          <p class="font-thai text-gray-300 text-lg leading-relaxed mb-6 font-light">
+            ต้องใช้ความอดทนและเส้นย่านลิเภาที่คัดสรรเฉพาะ
+            นำมาสานด้วยความประณีตนานนับเดือน
+            ทุกเส้นสาย ทุกลวดลาย ล้วนบอกเล่าเรื่องราวของช่างฝีมือ
+            ที่ทุ่มเทหัวใจในทุกชิ้นงาน
+          </p>
+
+          <p class="font-thai text-gold-400/80 text-base italic">
+            "งานฝีมือที่ไม่มีเครื่องจักรใดทดแทนได้"
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gold-400/20">
+            <div class="text-center">
+              <p class="font-display text-3xl text-gold-400 font-bold">300+</p>
+              <p class="font-thai text-gray-400 text-sm mt-1">ปีแห่งการสืบทอด</p>
+            </div>
+            <div class="text-center">
+              <p class="font-display text-3xl text-gold-400 font-bold">30</p>
+              <p class="font-thai text-gray-400 text-sm mt-1">วันต่อชิ้นงาน</p>
+            </div>
+            <div class="text-center">
+              <p class="font-display text-3xl text-gold-400 font-bold">100%</p>
+              <p class="font-thai text-gray-400 text-sm mt-1">Handmade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [3] PRODUCT SHOWCASE -->
+  <!-- ============================================================ -->
+  <section id="products" class="bg-luxury-ivory py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-20 fade-up">
+        <p class="text-gold-500 tracking-[0.3em] uppercase text-xs mb-4 font-thai">Our Collection</p>
+        <h2 class="font-display text-3xl md:text-5xl font-bold text-luxury-dark mb-6">
+          คอลเลกชันคัดสรร
+        </h2>
+        <div class="flex justify-center mb-6">
+          <div class="gold-divider"></div>
+        </div>
+        <p class="font-thai text-gray-600 text-lg max-w-xl mx-auto font-light">
+          ผลงานชิ้นเอกจากช่างฝีมือชั้นครู แต่ละชิ้นล้วนมีเอกลักษณ์เฉพาะตัว
+        </p>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+
+        <!-- Product 1 -->
+        <div class="fade-up group">
+          <div class="product-card relative overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/5 corner-border">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                src="images/Gemini_Generated_Image_om450om450om450o.png"
+                alt="กระเป๋าย่านลิเภา ทรงรี"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="font-display text-xl font-bold text-luxury-dark mb-1">กระเป๋าทรงรี</h3>
+              <p class="font-thai text-gray-500 text-sm mb-3">Yan Lipao Oval Bag</p>
+              <p class="font-thai text-gold-500 font-semibold text-lg mb-4">เริ่มต้น 8,500 บาท</p>
+              <a href="#contact" class="inline-block border-2 border-gold-500 text-gold-500 font-thai font-semibold px-6 py-2.5 rounded-full text-sm hover:bg-gold-500 hover:text-white transition-all duration-300">
+                สั่งทำพิเศษ
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="fade-up group" style="transition-delay: 0.15s;">
+          <div class="product-card relative overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/5 corner-border">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                src="images/Gemini_Generated_Image_u4urdwu4urdwu4ur.png"
+                alt="กล่องใส่เครื่องประดับ"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="font-display text-xl font-bold text-luxury-dark mb-1">กล่องเครื่องประดับ</h3>
+              <p class="font-thai text-gray-500 text-sm mb-3">Yan Lipao Jewelry Box</p>
+              <p class="font-thai text-gold-500 font-semibold text-lg mb-4">เริ่มต้น 5,200 บาท</p>
+              <a href="#contact" class="inline-block border-2 border-gold-500 text-gold-500 font-thai font-semibold px-6 py-2.5 rounded-full text-sm hover:bg-gold-500 hover:text-white transition-all duration-300">
+                สอบถาม
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="fade-up group" style="transition-delay: 0.3s;">
+          <div class="product-card relative overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/5 corner-border">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                src="images/Gemini_Generated_Image_77tly577tly577tl.png"
+                alt="กำไลย่านลิเภา"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="font-display text-xl font-bold text-luxury-dark mb-1">กำไลสานประณีต</h3>
+              <p class="font-thai text-gray-500 text-sm mb-3">Yan Lipao Bangle</p>
+              <p class="font-thai text-gold-500 font-semibold text-lg mb-4">เริ่มต้น 3,800 บาท</p>
+              <a href="#contact" class="inline-block border-2 border-gold-500 text-gold-500 font-thai font-semibold px-6 py-2.5 rounded-full text-sm hover:bg-gold-500 hover:text-white transition-all duration-300">
+                สอบถาม
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [4] TESTIMONIALS & AWARDS -->
+  <!-- ============================================================ -->
+  <section id="testimonials" class="bg-luxury-brown py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-16 fade-up">
+        <p class="text-gold-400 tracking-[0.3em] uppercase text-xs mb-4 font-thai">Testimonials & Awards</p>
+        <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-6">
+          เสียงจากผู้ที่ได้สัมผัส
+        </h2>
+        <div class="flex justify-center mb-6">
+          <div class="gold-divider"></div>
+        </div>
+        <p class="font-thai text-gray-400 text-lg max-w-xl mx-auto font-light">
+          ความประทับใจจากลูกค้า และการยอมรับระดับประเทศ
+        </p>
+      </div>
+
+      <!-- Awards Bar -->
+      <div class="fade-up flex flex-wrap justify-center gap-6 md:gap-12 mb-16 py-8 border-y border-gold-400/20">
+        <div class="text-center px-4">
+          <p class="font-display text-2xl text-gold-400 font-bold">GI</p>
+          <p class="font-thai text-gray-400 text-xs mt-1">สิ่งบ่งชี้ทางภูมิศาสตร์</p>
+        </div>
+        <div class="text-center px-4">
+          <p class="font-display text-2xl text-gold-400 font-bold">OTOP</p>
+          <p class="font-thai text-gray-400 text-xs mt-1">ระดับ 5 ดาว</p>
+        </div>
+        <div class="text-center px-4">
+          <p class="font-display text-2xl text-gold-400 font-bold">UNESCO</p>
+          <p class="font-thai text-gray-400 text-xs mt-1">มรดกภูมิปัญญาทางวัฒนธรรม</p>
+        </div>
+        <div class="text-center px-4">
+          <p class="font-display text-2xl text-gold-400 font-bold">300+</p>
+          <p class="font-thai text-gray-400 text-xs mt-1">ลูกค้าทั่วโลก</p>
+        </div>
+      </div>
+
+      <!-- Testimonial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Review 1 -->
+        <div class="fade-up testimonial-card rounded-2xl p-8">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="font-thai text-gray-300 leading-relaxed mb-6 font-light italic">
+            "ซื้อกระเป๋าย่านลิเภาไปฝากแม่ แม่บอกว่าสวยกว่าแบรนด์เนมที่มีอีก ลวดลายละเอียดมาก ถือไปไหนก็ได้คำชมเสมอ"
+          </p>
+          <div>
+            <p class="font-thai text-white font-semibold text-sm">คุณสุภาพร ว.</p>
+            <p class="font-thai text-gray-500 text-xs">ลูกค้ากรุงเทพฯ</p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="fade-up testimonial-card rounded-2xl p-8" style="transition-delay: 0.15s;">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="font-thai text-gray-300 leading-relaxed mb-6 font-light italic">
+            "สั่งทำกล่องเครื่องประดับเป็นของขวัญแต่งงาน แขกต่างชาติประทับใจมาก ถามว่าซื้อได้ที่ไหน เป็นของฝากที่ทรงคุณค่าจริงๆ"
+          </p>
+          <div>
+            <p class="font-thai text-white font-semibold text-sm">คุณธนวัฒน์ พ.</p>
+            <p class="font-thai text-gray-500 text-xs">ลูกค้านครศรีธรรมราช</p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="fade-up testimonial-card rounded-2xl p-8" style="transition-delay: 0.3s;">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="font-thai text-gray-300 leading-relaxed mb-6 font-light italic">
+            "ใส่กำไลย่านลิเภาไปออกงานที่ต่างประเทศ ทุกคนถามว่ามาจากไหน ภูมิใจมากที่ได้บอกว่าเป็นงานฝีมือจากภาคใต้ของไทย"
+          </p>
+          <div>
+            <p class="font-thai text-white font-semibold text-sm">คุณมนัสนันท์ ก.</p>
+            <p class="font-thai text-gray-500 text-xs">ลูกค้าภูเก็ต</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- [5] FOOTER & CONTACT -->
+  <!-- ============================================================ -->
+  <section id="contact" class="relative bg-luxury-dark py-24 md:py-32 overflow-hidden">
+    <!-- Decorative bg pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-0 w-full h-full" style="background-image: repeating-linear-gradient(45deg, #D4A843 0, #D4A843 1px, transparent 0, transparent 50%); background-size: 40px 40px;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center fade-up">
+      <!-- Section label -->
+      <p class="text-gold-400 tracking-[0.3em] uppercase text-xs mb-6 font-thai">Get in Touch</p>
+
+      <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        สนใจสั่งทำ<br />
+        <span class="text-gold-400">หรือเลือกชมสินค้าจริง?</span>
+      </h2>
+
+      <div class="flex justify-center mb-8">
+        <div class="gold-divider"></div>
+      </div>
+
+      <p class="font-thai text-gray-400 text-lg mb-12 font-light leading-relaxed">
+        ทุกชิ้นงานสามารถสั่งทำพิเศษตามความต้องการ<br class="hidden md:block" />
+        พูดคุยกับช่างผู้เชี่ยวชาญโดยตรง
+      </p>
+
+      <!-- LINE CTA Button -->
+      <a
+        href="https://line.me/ti/p/YOUR_LINE_ID"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-gold inline-flex items-center gap-3 text-white font-thai font-semibold px-12 py-5 rounded-full text-xl tracking-wide"
+      >
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+        </svg>
+        พูดคุยกับช่างผู้เชี่ยวชาญ
+      </a>
+
+      <p class="font-thai text-gray-500 text-sm mt-6">Add LINE: @YanLipao</p>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="relative z-10 mt-20 pt-8 border-t border-white/10 max-w-4xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="font-thai text-gray-500 text-sm">
+          © 2026 ย่านลิเภา นครศรีธรรมราช — All Rights Reserved
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-500 hover:text-gold-400 transition-colors text-sm font-thai">Facebook</a>
+          <a href="#" class="text-gray-500 hover:text-gold-400 transition-colors text-sm font-thai">Instagram</a>
+          <a href="#" class="text-gray-500 hover:text-gold-400 transition-colors text-sm font-thai">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BACK TO TOP BUTTON -->
+  <!-- ============================================================ -->
+  <button id="back-to-top" class="back-to-top" aria-label="กลับขึ้นด้านบน">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <!-- ============================================================ -->
+  <!-- ALL SCRIPTS -->
+  <!-- ============================================================ -->
+  <script>
+    // ===== PRELOADER =====
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('hidden');
+      }, 2000);
+    });
+
+    // ===== NAVBAR SCROLL EFFECT =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // ===== MOBILE MENU =====
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    }
+
+    // ===== BACK TO TOP =====
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== FADE-UP ON SCROLL =====
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>

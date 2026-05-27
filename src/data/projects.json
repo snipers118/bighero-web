@@ -1,0 +1,401 @@
+[
+  {
+    "id": "sroi-platform",
+    "category": "dashboard",
+    "title": { "th": "SROI Platform", "en": "SROI Platform" },
+    "description": {
+      "th": "ระบบคำนวณ SROI พร้อม Dashboard แสดงผลข้อมูล รองรับ Import Excel และระบบอนุมัติข้อมูลอัตโนมัติ",
+      "en": "SROI calculation platform with data visualization dashboard, Excel import, and automated approval workflow"
+    },
+    "tags": ["Custom System", "Dashboard", "Automation", "Excel Import"],
+    "image": "/projects/sroi.jpg",
+    "link_type": "demo",
+    "featured": true,
+    "features": {
+      "th": [
+        "Dashboard สำหรับผู้บริหาร (Super Executive Dashboard) แสดงดัชนีชี้วัดผลกระทบทางสังคมระดับองค์กร (KPIs) แบบ Real-time",
+        "Dashboard ส่วนบุคคลสำหรับนักวิจัย (Researcher Dashboard) เพื่อติดตามสถานะโครงการและผลการดำเนินงานแบบรายบุคคล",
+        "ระบบวิเคราะห์เชิงกลยุทธ์ (Strategic Analysis) ด้วย Performance Matrix แสดง Impact vs Budget",
+        "ระบบจัดการและอนุมัติโครงการตามลำดับขั้น (Approval Workflow) พร้อมการแจ้งเตือนสถานะไปยังผู้เสนอโครงการ",
+        "ระบบคำนวณอัตราผลตอบแทนทางสังคม (SROI Ratio) แบบอัตโนมัติ ตามมาตรฐานสากล",
+        "รองรับการ Import ข้อมูลโครงการจาก Excel และ Export รายงานสรุปรูปแบบ Excel และ PDF"
+      ],
+      "en": [
+        "Super Executive Dashboard displaying real-time corporate-level social impact KPIs",
+        "Personalized Researcher Dashboard for tracking individual project status and performance",
+        "Strategic Analysis with Performance Matrix comparing Impact vs Budget",
+        "Multi-level Approval Workflow with automated status notifications to project owners",
+        "Automated Social Return on Investment (SROI) Ratio calculation based on global standards",
+        "Supports bulk Excel data import and comprehensive Excel/PDF report generation"
+      ]
+    }
+  },
+  {
+    "id": "gov-website",
+    "category": "website",
+    "title": { "th": "เว็บไซต์หน่วยงานราชการยุคใหม่", "en": "Modern Government Website" },
+    "description": {
+      "th": "ต้นแบบเว็บไซต์หน่วยงานราชการที่เน้นผู้ใช้งานเป็นศูนย์กลาง (User-Centric) พร้อมระบบ Accessibility, E-Service Portal และ Mega Menu",
+      "en": "A modern, user-centric government website prototype featuring Accessibility tools, an E-Service Portal, and Mega Menu navigation."
+    },
+    "tags": ["GovTech", "Accessibility", "E-Service", "UX/UI"],
+    "image": "/projects/gov.jpg",
+    "link_type": "demo",
+    "featured": true,
+    "features": {
+      "th": [
+        "ระบบ Accessibility (WCAG) ปรับขนาดตัวอักษรและสี High Contrast สำหรับผู้สูงอายุและผู้พิการ",
+        "Smart E-Service Portal ระบบค้นหาบริการประชาชนอัจฉริยะแบบ Auto-suggest",
+        "Modern Mega Menu จัดระเบียบข้อมูลราชการที่ซับซ้อนให้เข้าถึงง่าย",
+        "Emergency Alert Banner ระบบแจ้งเตือนภัยพิบัติและข่าวฉุกเฉินแบบเรียลไทม์",
+        "ดีไซน์ 3 รูปแบบ: Modern & Clean, Trust & Heritage, และ Citizen-First"
+      ],
+      "en": [
+        "Accessibility Tools (WCAG) with text resizing and high contrast modes",
+        "Smart E-Service Portal with auto-suggest for citizen services",
+        "Modern Mega Menu for organizing complex government information architecture",
+        "Emergency Alert Banner for real-time crisis notifications",
+        "3 Design variants: Modern & Clean, Trust & Heritage, and Citizen-First"
+      ]
+    }
+  },
+  {
+    "id": "zoom-booking",
+    "category": "api",
+    "title": { "th": "ระบบจอง Zoom Meeting", "en": "Zoom Meeting Booking System" },
+    "description": {
+      "th": "ระบบจองห้องประชุม Zoom แบบอัตโนมัติ เชื่อมต่อ Zoom API โดยตรง ช่วยให้องค์กรบริหารจัดการบัญชี Zoom ได้อย่างมีประสิทธิภาพ รองรับการทำงานผ่านระบบเว็บและ Telegram",
+      "en": "Automated Zoom meeting room booking system with direct Zoom API integration, helping organizations manage Zoom accounts efficiently via web and Telegram."
+    },
+    "features": {
+      "th": [
+        "ระบบจัดการสิทธิ์ผู้ใช้งาน (User & Admin Accounts)",
+        "ระบบแจ้งเตือนสถานะการจองผ่าน Email สำหรับผู้ใช้งาน",
+        "ระบบแจ้งเตือนและจัดการคำขอจอง (อนุมัติ/ยกเลิก) สำหรับ Admin ผ่าน Telegram Bot ทันที",
+        "ระบบป้องกันการจองซ้ำเวลา (Double Booking Prevention)",
+        "แสดงผลตารางการจองในรูปแบบปฏิทิน (Calendar View)",
+        "ตั้งค่าข้อจำกัดเวลา เช่น การจองล่วงหน้า และ Delay Time",
+        "ตั้งค่าการอนุมัติคำขอจองอัตโนมัติ (Auto-Approve)"
+      ],
+      "en": [
+        "User and Admin role management",
+        "Email notifications for booking status",
+        "Telegram Bot integration for Admins to instantly approve or cancel requests",
+        "Double booking prevention system",
+        "Interactive Calendar View for schedules",
+        "Time constraints and delay settings for bookings",
+        "Auto-approve functionality for trusted bookings"
+      ]
+    },
+    "tags": ["Backend System", "Zoom API", "Telegram Bot", "Automation"],
+    "image": "/projects/zoom.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "sso-system",
+    "category": "api",
+    "title": { "th": "ระบบ Single Sign-On (SSO)", "en": "Single Sign-On (SSO) System" },
+    "description": {
+      "th": "ระบบยืนยันตัวตนแบบรวมศูนย์ (Centralized Authentication) รองรับ Active Directory, Google และ ThaID ช่วยให้ผู้ใช้งานล็อกอินครั้งเดียวเข้าใช้งานได้ทุกแอปพลิเคชันในองค์กร พร้อมระบบจัดการสิทธิ์และ Security ระดับองค์กร",
+      "en": "Centralized authentication system supporting Active Directory, Google, and ThaID. Users log in once to access all organizational applications with enterprise-grade security and access management."
+    },
+    "features": {
+      "th": [
+        "ระบบจัดการผู้ดูแล (Admin Management) เพิ่ม/ลบ Admin ได้",
+        "เพิ่ม App Client ได้ไม่จำกัด รองรับ OAuth 2.0",
+        "ตั้งค่า Revoke สิทธิ์แยกตามแต่ละ App Client ได้",
+        "ระบบยืนยันตัวตน 2 ชั้น (2FA) สำหรับ Admin",
+        "เชื่อมต่อฐานข้อมูล Active Directory (AD) ขององค์กร",
+        "ระบบ Log การใช้งาน ดูประวัติ Session และอุปกรณ์ที่ล็อกอิน",
+        "แสดง Active Sessions สามารถ Logout อุปกรณ์ที่ต้องการได้ทันที"
+      ],
+      "en": [
+        "Admin Management — add or remove administrators",
+        "Unlimited App Client registration with OAuth 2.0 support",
+        "Per-app Revoke settings for fine-grained access control",
+        "Two-Factor Authentication (2FA) for Admin accounts",
+        "Active Directory (AD) database integration",
+        "Activity logs with session history and device tracking",
+        "Active Sessions view with instant device Logout capability"
+      ]
+    },
+    "tags": ["SSO", "Active Directory", "OAuth 2.0", "2FA", "Security"],
+    "image": "/projects/sso.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "corporate-web-1",
+    "category": "corporate",
+    "title": { "th": "เว็บไซต์หน่วยงานราชการ", "en": "Government Agency Website" },
+    "description": {
+      "th": "เว็บไซต์หน่วยงานราชการพร้อมระบบจัดการเนื้อหา CMS ที่ใช้งานง่าย รองรับการแสดงผลบนทุกอุปกรณ์",
+      "en": "Government agency website with easy-to-use CMS, fully responsive across all devices"
+    },
+    "tags": ["CMS System", "Responsive"],
+    "image": "/projects/corporate1.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "landing-sme",
+    "category": "landing",
+    "title": { "th": "Landing Page ธุรกิจ SME", "en": "SME Business Landing Page" },
+    "description": {
+      "th": "แลนดิ้งเพจสำหรับธุรกิจ SME ดีไซน์เน้นปิดการขาย พร้อมฟอร์มติดต่อและ Analytics",
+      "en": "Conversion-focused landing page for SME business with contact form and analytics"
+    },
+    "tags": ["Fast Performance", "Modern UI", "SEO"],
+    "image": "/projects/landing.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "corporate-web-2",
+    "category": "corporate",
+    "title": { "th": "เว็บไซต์องค์กรเอกชน", "en": "Private Corporate Website" },
+    "description": {
+      "th": "เว็บไซต์องค์กรเอกชนขนาดใหญ่ พร้อมระบบข่าวสาร กิจกรรม และแกลเลอรี",
+      "en": "Large-scale corporate website with news, events, and gallery management system"
+    },
+    "tags": ["CMS System", "Multi-language"],
+    "image": "/projects/corporate2.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "ecommerce-swimwear",
+    "category": "ecommerce",
+    "title": { "th": "ร้านขายชุดว่ายน้ำและบิกินี่", "en": "Swimwear & Bikini E-Commerce" },
+    "description": {
+      "th": "แพลตฟอร์มร้านค้าออนไลน์ดีไซน์พรีเมียม ระบบตะกร้าสินค้า ระบบชำระเงิน และจัดการสต๊อกแบบเรียลไทม์",
+      "en": "Premium e-commerce platform with shopping cart, payment gateway, and real-time inventory management"
+    },
+    "tags": ["E-Commerce", "Payment Gateway", "Modern UI", "Cart"],
+    "image": "/projects/ecommerce.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "ecommerce-tactical",
+    "category": "ecommerce",
+    "title": { "th": "ร้านขายอุปกรณ์ยุทธวิธีและทหาร", "en": "Tactical Gear & Military E-Commerce" },
+    "description": {
+      "th": "แพลตฟอร์มร้านค้าออนไลน์ดีไซน์ดุดัน เท่ห์ ล้ำสมัย สำหรับอุปกรณ์ทางยุทธวิธี พร้อมระบบค้นหาอัจฉริยะ",
+      "en": "Rugged, modern e-commerce platform for tactical gear with smart search and interactive UI"
+    },
+    "tags": ["E-Commerce", "Interactive UI", "Dark Theme"],
+    "image": "/projects/ecommerce2.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "corporate-prefab",
+    "category": "corporate",
+    "title": { "th": "บริการสร้างอาคารสำเร็จรูป", "en": "Prefab Building Solutions" },
+    "description": {
+      "th": "เว็บไซต์บริษัทรับเหมาก่อสร้าง B2B เน้นนำเสนอนวัตกรรมอาคารสำเร็จรูป พร้อมระบบจำลองคำนวณราคาและแบบจำลองอาคารเบื้องต้น",
+      "en": "B2B construction company website showcasing prefab innovations with an interactive building configurator and cost estimator."
+    },
+    "tags": ["Corporate", "B2B", "Interactive Configurator"],
+    "image": "/projects/corporate3.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "ecommerce-culture",
+    "category": "ecommerce",
+    "title": { "th": "จำหน่ายผลิตภัณฑ์และบริการทางวัฒนธรรม", "en": "Cultural Products & Services E-Commerce" },
+    "description": {
+      "th": "เว็บไซต์อีคอมเมิร์ซแนวพรีเมียม นำเสนอสินค้าหัตถกรรม งานคราฟต์ และจองบริการทางวัฒนธรรม พร้อมแบนเนอร์ขนาดใหญ่สวยงาม",
+      "en": "Premium e-commerce for cultural crafts and services with large cinematic banners and elegant product displays."
+    },
+    "tags": ["E-Commerce", "Premium UI", "Culture"],
+    "image": "/projects/culture.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "corporate-transport",
+    "category": "corporate",
+    "title": { "th": "บริการรถขนส่งสินค้าและโลจิสติกส์", "en": "Logistics & Freight Transport Services" },
+    "description": {
+      "th": "เว็บไซต์บริษัทโลจิสติกส์ ให้บริการรถรับจ้าง 4 ล้อ และ 6 ล้อ ทั่วประเทศ พร้อมระบบคำนวณค่าขนส่งและประเมินราคา",
+      "en": "Logistics company website offering nationwide 4-wheel and 6-wheel truck freight services with an interactive fare estimator."
+    },
+    "tags": ["Corporate", "Logistics", "Fare Estimator"],
+    "image": "/projects/logistics.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "ecommerce-fashion",
+    "category": "ecommerce",
+    "title": { "th": "แบรนด์เสื้อผ้าแฟชั่นผู้หญิง", "en": "Women's Fashion E-Commerce" },
+    "description": {
+      "th": "เว็บไซต์ร้านเสื้อผ้าแฟชั่นสไตล์มินิมอล มีระบบเลือกไซส์ สี สินค้า และ Quick View ที่ทันสมัย ใช้งานง่ายบนมือถือ",
+      "en": "Minimalist women's fashion boutique with size/color selection and a modern Quick View feature, optimized for mobile."
+    },
+    "tags": ["E-Commerce", "Minimalist", "Fashion"],
+    "image": "/projects/fashion.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "landing-realestate",
+    "category": "landing",
+    "title": { "th": "โครงการบ้านเดี่ยวระดับลักชัวรี", "en": "Luxury Real Estate Estate" },
+    "description": {
+      "th": "เว็บไซต์นำเสนอโครงการบ้านจัดสรรระดับไฮเอนด์ เน้นภาพขนาดใหญ่สวยงาม พร้อมระบบดูแปลนบ้านและสิ่งอำนวยความสะดวก",
+      "en": "High-end real estate landing page focusing on large, stunning imagery, interactive floor plans, and premium facilities."
+    },
+    "tags": ["Real Estate", "Luxury UI", "Landing Page"],
+    "image": "/projects/realestate.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "ecommerce-jewelry",
+    "category": "ecommerce",
+    "title": { "th": "ร้านเครื่องประดับเพชรและทองคำ", "en": "High Jewelry & Diamond E-Commerce" },
+    "description": {
+      "th": "เว็บไซต์แบรนด์เครื่องประดับหรู ดีไซน์จัดวางแบบแมกกาซีน (Magazine Layout) นำเสนอเพชรและทองคำอย่างโดดเด่น",
+      "en": "Luxury jewelry e-commerce featuring an editorial magazine layout to showcase diamonds and gold elegantly."
+    },
+    "tags": ["E-Commerce", "High Jewelry", "Magazine Layout"],
+    "image": "/projects/jewelry.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "ecommerce-gadget",
+    "category": "ecommerce",
+    "title": { "th": "ร้านสินค้าไอทีและแก็ดเจ็ต", "en": "Modern IT & Gadgets Store" },
+    "description": {
+      "th": "เว็บไซต์ขายอุปกรณ์ไอทีและเกมมิ่งเกียร์ ดีไซน์คลีน ทันสมัย พร้อมลูกเล่นเปลี่ยนสีสินค้าและเอฟเฟกต์โฮเวอร์ดูล้ำอนาคต",
+      "en": "Clean and modern IT store featuring interactive product color switching and futuristic hover effects."
+    },
+    "tags": ["E-Commerce", "Tech & Gadget", "Interactive UI"],
+    "image": "/projects/gadget.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "corporate-tour",
+    "category": "corporate",
+    "title": { "th": "เว็บไซต์บริษัททัวร์และท่องเที่ยว", "en": "Tour & Travel Agency" },
+    "description": {
+      "th": "เว็บไซต์บริษัททัวร์ที่เน้นสร้างความน่าเชื่อถือ มีระบบค้นหาโปรแกรมทัวร์ และแสดงใบอนุญาตประกอบธุรกิจนำเที่ยวอย่างชัดเจน",
+      "en": "A highly credible tour agency website featuring tour program search, itineraries, and prominent tourism license displays."
+    },
+    "tags": ["Corporate", "Travel", "High Trust"],
+    "image": "/projects/tour.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "corporate-hotel",
+    "category": "corporate",
+    "title": { "th": "เว็บไซต์โรงแรมและรีสอร์ท", "en": "Luxury Beach Resort" },
+    "description": {
+      "th": "เว็บไซต์รีสอร์ทริมทะเลสุดหรู นำเสนอภาพวิวทะเลสวยงาม พร้อมระบบค้นหาห้องพักและสิ่งอำนวยความสะดวกครบครัน",
+      "en": "A serene luxury beach resort website featuring stunning ocean views, room booking widget, and elegant design."
+    },
+    "tags": ["Corporate", "Hospitality", "Booking"],
+    "image": "/projects/hotel.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "corporate-spa",
+    "category": "corporate",
+    "title": { "th": "เว็บไซต์สปาและสุขภาพ", "en": "Wellness & Spa Center" },
+    "description": {
+      "th": "เว็บไซต์ธุรกิจสปาที่เน้นความผ่อนคลาย โทนสีธรรมชาติ พร้อมแสดงเมนูบริการและระบบนัดหมาย",
+      "en": "A relaxing wellness and spa website featuring earthy tones, service menus, and an appointment booking system."
+    },
+    "tags": ["Corporate", "Wellness", "Service"],
+    "image": "/projects/spa.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "ecommerce-health",
+    "category": "ecommerce",
+    "title": { "th": "เว็บไซต์ผลิตภัณฑ์สุขภาพและอาหารเสริม", "en": "Health & Supplements Store" },
+    "description": {
+      "th": "เว็บไซต์จำหน่ายอาหารเสริมและผลิตภัณฑ์เพื่อสุขภาพ ดีไซน์สะอาดตา น่าเชื่อถือสไตล์การแพทย์ พร้อมระบบหมวดหมู่ตามความต้องการ",
+      "en": "A clean, clinical-style e-commerce site for health supplements featuring trust badges and health-goal categorizations."
+    },
+    "tags": ["E-Commerce", "Health", "Supplements"],
+    "image": "/projects/health.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "landing-wickerwork",
+    "category": "landing",
+    "title": { "th": "เว็บไซต์ธุรกิจ SME เครื่องจักสาน", "en": "Modern Wickerwork SME" },
+    "description": {
+      "th": "Landing Page สำหรับธุรกิจ SME งานคราฟท์ เครื่องจักสาน เน้นการนำเสนอสินค้าด้วยแอนิเมชันและลูกเล่นแบบ Modern Rustic",
+      "en": "A modern landing page for a wickerwork craft SME, featuring interactive animations and a premium rustic design."
+    },
+    "tags": ["Landing Page", "SME", "Craft", "Animation"],
+    "image": "/projects/wickerwork.jpg",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "landing-mushroom",
+    "category": "landing",
+    "title": { "th": "เว็บไซต์ฟาร์มเห็ดครบวงจร", "en": "Integrated Mushroom Farm" },
+    "description": {
+      "th": "Landing Page ฟาร์มเห็ดครบวงจร นำเสนอทั้งก้อนเชื้อ ผลิตภัณฑ์แปรรูป และบริการให้คำปรึกษาสำหรับธุรกิจ",
+      "en": "Comprehensive landing page for a mushroom farm, featuring spore bags, processed products, and B2B consulting services."
+    },
+    "tags": ["Landing Page", "Agriculture", "B2B", "E-Commerce"],
+    "image": "/projects/mushroom.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "landing-rakmak",
+    "category": "landing",
+    "title": { "th": "เว็บไซต์จานรักษ์โลก 'รักษ์หมาก'", "en": "RakMak Eco Plates" },
+    "description": {
+      "th": "Landing Page สำหรับผลิตภัณฑ์จานกาบหมาก 100% นำเสนอความเป็นมิตรต่อสิ่งแวดล้อมและการสนับสนุนชุมชน",
+      "en": "Eco-friendly landing page for 100% natural betel palm leaf plates, highlighting sustainability and community support."
+    },
+    "tags": ["Landing Page", "Eco-Friendly", "OTOP", "Community"],
+    "image": "/projects/rakmak-banner.jpg",
+    "link_type": "demo",
+    "featured": true
+  },
+  {
+    "id": "landing-sap",
+    "category": "landing",
+    "title": { "th": "เครื่องแกงตำมือ หมู่ 19", "en": "Moo 19 Curry Paste" },
+    "description": {
+      "th": "Landing Page จำหน่ายเครื่องแกงตำมือ สินค้า OTOP ของดีประจำหมู่บ้าน นำเสนอเสน่ห์ของอาหารใต้",
+      "en": "Landing page for authentic hand-pounded Southern Thai curry paste, an OTOP community product."
+    },
+    "tags": ["Landing Page", "Food", "OTOP", "SME"],
+    "image": "/sap/images/Gemini_Generated_Image_kagroukagroukagr.png",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "ecommerce-luxury",
+    "category": "ecommerce",
+    "title": { "th": "เว็บไซต์แบรนด์เนมสุดหรู", "en": "Luxury Brand Store" },
+    "description": {
+      "th": "เว็บไซต์ E-commerce สำหรับสินค้าแบรนด์เนม นำเสนอความหรูหราพรีเมียม",
+      "en": "Premium e-commerce website designed for a luxury fashion brand."
+    },
+    "tags": ["E-Commerce", "Luxury", "Fashion", "Premium"],
+    "image": "/LuxuryBrand/images/hero-bg.jpg",
+    "link_type": "demo",
+    "featured": false
+  }
+]

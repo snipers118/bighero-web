@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSTRU SROI - Super Executive Dashboard</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Sarabun', 'sans-serif'],
+                        display: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        admin: {
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- ApexCharts & Alpine -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-family: 'Prompt', sans-serif;
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.5rem;
+            background: #4f46e5;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased text-sm">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-indigo-700 rounded-lg flex items-center justify-center text-white font-display font-bold text-xl shadow-md">
+                            S</div>
+                        <div>
+                            <h1 class="font-display font-bold text-lg text-gray-900 leading-tight">Super Executive
+                                Dashboard</h1>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Strategic &
+                                Operational View</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1 py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+                <!-- 1. Executive Summary Cards (KPIs) -->
+                <div>
+                    <h2 class="section-title">Key Performance Indicators</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <!-- Progress -->
+                        <div
+                            class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 relative overflow-hidden flex items-center justify-between hover-lift">
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase">Target Achievement</p>
+                                <h3 class="text-3xl font-bold text-gray-900 mt-1">82%</h3>
+                                <p class="text-xs text-green-600 font-bold">↑ On Track</p>
+                            </div>
+                            <div id="gaugeProgress" class="w-20 h-20 -my-2"></div>
+                        </div>
+
+                        <!-- Quality -->
+                        <div
+                            class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 relative overflow-hidden flex items-center justify-between hover-lift">
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase">Data Quality</p>
+                                <h3 class="text-3xl font-bold text-gray-900 mt-1">High</h3>
+                                <p class="text-xs text-blue-600 font-bold">Verified</p>
+                            </div>
+                            <div id="gaugeQuality" class="w-20 h-20 -my-2"></div>
+                        </div>
+
+                        <!-- Total Value -->
+                        <div
+                            class="bg-gradient-to-r from-indigo-800 to-blue-900 rounded-xl shadow-md p-4 text-white col-span-2 relative overflow-hidden hover-lift group">
+                            <div
+                                class="absolute right-0 top-0 opacity-10 transform scale-150 group-hover:rotate-12 transition">
+                                <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="relative z-10 flex justify-between items-end">
+                                <div>
+                                    <p class="text-[10px] text-indigo-200 font-bold uppercase">Total Social Value (YTD)
+                                    </p>
+                                    <h3 class="text-4xl font-display font-bold mt-1">฿12.8M</h3>
+                                    <p class="text-xs text-indigo-300 mt-1">Net Present Value generated this fiscal year
+                                    </p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-[10px] text-indigo-200 font-bold uppercase">Average SROI</p>
+                                    <div class="flex items-baseline gap-1 justify-end">
+                                        <h3 class="text-3xl font-bold text-white">4.52</h3>
+                                        <span class="text-sm text-indigo-300">: 1</span>
+                                    </div>
+                                    <div class="w-32 bg-white/20 rounded-full h-1.5 mt-2">
+                                        <div class="bg-gradient-to-r from-yellow-400 to-green-400 h-1.5 rounded-full"
+                                            style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Action Required: Pending Approvals -->
+                <div class="bg-white rounded-xl shadow-sm border border-red-100 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-red-50 bg-red-50/30 flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <span class="relative flex h-3 w-3">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                            </span>
+                            <h3 class="font-bold text-gray-900 text-base">รอการอนุมัติ (Pending Approvals)</h3>
+                        </div>
+                        <span
+                            class="px-2 py-1 bg-white border border-red-200 text-red-700 text-xs font-bold rounded-md shadow-sm">3
+                            Items</span>
+                    </div>
+                    <div class="divide-y divide-gray-100">
+                        <!-- Item 1 -->
+                        <div class="p-4 hover:bg-gray-50 flex items-center justify-between transition">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-lg">
+                                    OT</div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-900">โครงการยกระดับสินค้าชุมชน OTOP</h4>
+                                    <p class="text-xs text-gray-500">เสนอโดย: <span
+                                            class="font-medium text-gray-800">คณะวิทยาศาสตร์</span> • งบประมาณ: ฿150,000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button
+                                    class="px-3 py-1.5 text-xs font-bold text-white bg-green-600 hover:bg-green-700 rounded shadow-sm transition">อนุมัติ</button>
+                                <button
+                                    class="px-3 py-1.5 text-xs font-medium text-red-600 bg-white border border-gray-200 hover:bg-red-50 rounded shadow-sm transition">ปฏิเสธ</button>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="p-4 hover:bg-gray-50 flex items-center justify-between transition">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg">
+                                    EN</div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-900">อบรมภาษาอังกฤษเพื่อชุมชน</h4>
+                                    <p class="text-xs text-gray-500">เสนอโดย: <span
+                                            class="font-medium text-gray-800">คณะครุศาสตร์</span> • งบประมาณ: ฿50,000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button
+                                    class="px-3 py-1.5 text-xs font-bold text-white bg-green-600 hover:bg-green-700 rounded shadow-sm transition">อนุมัติ</button>
+                                <button
+                                    class="px-3 py-1.5 text-xs font-medium text-red-600 bg-white border border-gray-200 hover:bg-red-50 rounded shadow-sm transition">ปฏิเสธ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Strategic Analysis (Matrix & Stacked Bar) -->
+                <div>
+                    <h2 class="section-title">Strategic Analysis</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Matrix -->
+                        <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <h3 class="font-bold text-lg">Performance Matrix</h3>
+                                    <p class="text-xs text-gray-500">Impact vs Budget (Size = SROI)</p>
+                                </div>
+                            </div>
+                            <div id="quadrantChart" class="w-full h-[320px]"></div>
+                        </div>
+                        <!-- Faculty Bar -->
+                        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col">
+                            <h3 class="font-bold text-lg mb-2">Value by Faculty</h3>
+                            <p class="text-xs text-gray-500 mb-4">Economic vs Social vs Env</p>
+                            <div id="facultyBarChart" class="flex-1"></div>
+                            <div
+                                class="mt-4 bg-indigo-50 rounded-lg p-3 border border-indigo-100 flex justify-between items-center">
+                                <div>
+                                    <p class="text-xs font-bold text-indigo-500 uppercase">Top Performer</p>
+                                    <p class="text-sm font-bold text-gray-900">Science</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xl font-bold text-indigo-700">4.85</p>
+                                    <p class="text-[10px] text-indigo-400">SROI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Operational Trends (Trend & Donut) -->
+                <div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Trend Area -->
+                        <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                            <h3 class="font-bold text-lg mb-4">Investment vs Return Trends</h3>
+                            <div id="trendChart" class="w-full h-[300px]"></div>
+                        </div>
+                        <!-- Stakeholder Donut -->
+                        <div
+                            class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col items-center">
+                            <h3 class="font-bold text-lg w-full text-left mb-2">Stakeholder Distribution</h3>
+                            <div id="stakeholderDonut" class="w-full flex justify-center"></div>
+                            <div class="w-full mt-4 space-y-2">
+                                <div class="flex justify-between text-xs border-b border-dashed border-gray-100 pb-1">
+                                    <span class="flex items-center text-gray-600"><span
+                                            class="w-2 h-2 rounded-full bg-cyan-500 mr-2"></span> นักศึกษา</span><span
+                                        class="font-bold">169k</span>
+                                </div>
+                                <div class="flex justify-between text-xs border-b border-dashed border-gray-100 pb-1">
+                                    <span class="flex items-center text-gray-600"><span
+                                            class="w-2 h-2 rounded-full bg-indigo-500 mr-2"></span> ชุมชน</span><span
+                                        class="font-bold">71k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Top Impact Indicators (Cards) -->
+                <div>
+                    <h2 class="section-title">Top Impact Indicators</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:border-green-400 transition group">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-green-100 text-green-600 flex items-center justify-center mb-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg></div>
+                            <h4 class="font-bold text-gray-900">อัตราการจ้างงานเพิ่มขึ้น</h4>
+                            <div class="mt-4 flex justify-between items-end">
+                                <span class="text-2xl font-bold text-gray-900">฿4.2M</span>
+                                <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full">Score
+                                    554</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-1 mt-2">
+                                <div class="bg-green-500 h-1 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:border-blue-400 transition group">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                    </path>
+                                </svg></div>
+                            <h4 class="font-bold text-gray-900">ลดค่าใช้จ่ายสุขภาพผู้สูงอายุ</h4>
+                            <div class="mt-4 flex justify-between items-end">
+                                <span class="text-2xl font-bold text-gray-900">฿1.8M</span>
+                                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Score
+                                    359</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-1 mt-2">
+                                <div class="bg-blue-500 h-1 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:border-orange-400 transition group">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                    </path>
+                                </svg></div>
+                            <h4 class="font-bold text-gray-900">รายได้วิสาหกิจชุมชนเพิ่ม</h4>
+                            <div class="mt-4 flex justify-between items-end">
+                                <span class="text-2xl font-bold text-gray-900">฿980k</span>
+                                <span
+                                    class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded-full">Score
+                                    334</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-1 mt-2">
+                                <div class="bg-orange-500 h-1 rounded-full" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Unit Summary Table -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+                        <h3 class="font-bold text-lg text-gray-900">Unit Summary Report</h3>
+                        <button class="text-xs text-admin-600 font-bold">Download Excel</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left whitespace-nowrap">
+                            <thead class="text-xs text-gray-500 uppercase bg-gray-50 border-b border-gray-100">
+                                <tr>
+                                    <th class="px-6 py-4 font-bold">Faculty</th>
+                                    <th class="px-6 py-4 font-bold text-center">Projects</th>
+                                    <th class="px-6 py-4 font-bold text-right">Budget</th>
+                                    <th class="px-6 py-4 font-bold text-right">Impact</th>
+                                    <th class="px-6 py-4 font-bold text-center">SROI Ratio</th>
+                                    <th class="px-6 py-4 font-bold text-center">Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-bold">คณะวิทยาศาสตร์</td>
+                                    <td class="px-6 py-4 text-center">3</td>
+                                    <td class="px-6 py-4 text-right">฿500,000</td>
+                                    <td class="px-6 py-4 text-right text-green-700">฿2,425,000</td>
+                                    <td class="px-6 py-4 text-center text-green-600 font-bold">4.85</td>
+                                    <td class="px-6 py-4 text-center"><span
+                                            class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">A+</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-bold">คณะครุศาสตร์</td>
+                                    <td class="px-6 py-4 text-center">5</td>
+                                    <td class="px-6 py-4 text-right">฿850,000</td>
+                                    <td class="px-6 py-4 text-right text-blue-700">฿2,100,000</td>
+                                    <td class="px-6 py-4 text-center text-admin-600 font-bold">2.47</td>
+                                    <td class="px-6 py-4 text-center"><span
+                                            class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">B</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 7. Strategic Timeline -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="font-bold text-lg mb-6">Execution Timeline</h3>
+                    <div class="flex justify-between items-center relative">
+                        <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-100 -z-0"></div>
+                        <div class="relative z-10 text-center">
+                            <div class="w-4 h-4 bg-green-500 rounded-full mx-auto ring-4 ring-white"></div>
+                            <p class="mt-2 text-xs font-bold">Q1 / 2569</p>
+                            <span
+                                class="px-2 py-0.5 bg-green-100 text-green-700 text-[10px] rounded font-bold">Completed</span>
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div class="w-4 h-4 bg-blue-500 rounded-full mx-auto ring-4 ring-white"></div>
+                            <p class="mt-2 text-xs font-bold">Q2 / 2569</p>
+                            <span
+                                class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] rounded font-bold">Active</span>
+                        </div>
+                        <div class="relative z-10 text-center opacity-50">
+                            <div class="w-4 h-4 bg-gray-300 rounded-full mx-auto ring-4 ring-white"></div>
+                            <p class="mt-2 text-xs font-bold">Q3 / 2569</p>
+                            <span
+                                class="px-2 py-0.5 bg-gray-100 text-gray-500 text-[10px] rounded font-bold">Next</span>
+                        </div>
+                        <div class="relative z-10 text-center opacity-50">
+                            <div class="w-4 h-4 bg-gray-300 rounded-full mx-auto ring-4 ring-white"></div>
+                            <p class="mt-2 text-xs font-bold">Q4 / 2569</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Charts Scripts -->
+    <script>
+        // Progress
+        new ApexCharts(document.querySelector("#gaugeProgress"), { series: [82], chart: { height: 100, type: 'radialBar', sparkline: { enabled: true } }, plotOptions: { radialBar: { hollow: { size: '60%' }, track: { background: '#f1f5f9' }, dataLabels: { show: false } } }, colors: ['#16a34a'], stroke: { lineCap: 'round' } }).render();
+        // Quality
+        new ApexCharts(document.querySelector("#gaugeQuality"), { series: [71], chart: { height: 100, type: 'radialBar', sparkline: { enabled: true } }, plotOptions: { radialBar: { hollow: { size: '60%' }, track: { background: '#f1f5f9' }, dataLabels: { show: false } } }, colors: ['#0ea5e9'], stroke: { lineCap: 'round' } }).render();
+        // Matrix
+        new ApexCharts(document.querySelector("#quadrantChart"), { series: [{ name: "Science", data: [[150, 650, 4.3], [200, 950, 4.7], [50, 250, 5.0]] }, { name: "Edu", data: [[100, 220, 2.2], [300, 600, 2.0]] }, { name: "Humanities", data: [[50, 90, 1.8], [80, 150, 1.9]] }], chart: { height: 320, type: 'bubble', fontFamily: 'Sarabun' }, dataLabels: { enabled: false }, fill: { opacity: 0.8 }, xaxis: { type: 'numeric', title: { text: 'Budget (k)' }, tickAmount: 5 }, yaxis: { title: { text: 'Impact (k)' } }, theme: { palette: 'palette1' }, legend: { position: 'top' } }).render();
+        // Faculty Bar
+        new ApexCharts(document.querySelector("#facultyBarChart"), { series: [{ name: 'Eco', data: [44, 55, 41] }, { name: 'Soc', data: [13, 23, 20] }, { name: 'Env', data: [11, 17, 15] }], chart: { type: 'bar', height: 200, stacked: true, toolbar: { show: false }, fontFamily: 'Sarabun' }, plotOptions: { bar: { borderRadius: 4, columnWidth: '40%' } }, xaxis: { categories: ['Sci', 'Edu', 'Hum'] }, legend: { position: 'bottom' }, colors: ['#0ea5e9', '#8b5cf6', '#22c55e'] }).render();
+        // Trend
+        new ApexCharts(document.querySelector("#trendChart"), { series: [{ name: 'Impact', type: 'area', data: [20, 45, 30, 50, 60, 40, 70, 85] }, { name: 'Budget', type: 'line', data: [35, 40, 50, 45, 55, 60, 55, 50] }], chart: { height: 300, type: 'line', fontFamily: 'Sarabun', toolbar: { show: false } }, stroke: { width: [0, 3], curve: 'smooth' }, plotOptions: { area: { fillTo: 'origin' } }, fill: { opacity: [0.8, 1], type: ['solid', 'solid'] }, colors: ['#3b82f6', '#fb923c'], xaxis: { categories: ['Q1', 'Q2', 'Q3', 'Q4', 'Q1', 'Q2', 'Q3', 'Q4'] } }).render();
+        // Donut
+        new ApexCharts(document.querySelector("#stakeholderDonut"), { series: [62, 22, 16], labels: ['Std', 'Com', 'SME'], chart: { type: 'donut', height: 260, fontFamily: 'Sarabun' }, colors: ['#06b6d4', '#6366f1', '#f97316'], plotOptions: { pie: { donut: { size: '70%', labels: { show: true, total: { show: true, label: 'Total', formatter: () => '247k' } } } } }, legend: { show: false }, stroke: { show: false } }).render();
+    </script>
+</body>
+
+</html>

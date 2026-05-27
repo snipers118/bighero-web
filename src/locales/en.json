@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "language": "TH"
+  },
+  "hero": {
+    "title": "Complete Solutions",
+    "subtitle": "For Websites & Backend Systems",
+    "description": "A superhero team ready to build websites and systems that drive your business forward",
+    "cta_primary": "View All Projects",
+    "cta_secondary": "Free Consultation"
+  },
+  "techstack": {
+    "title": "Technologies We Master"
+  },
+  "featured": {
+    "title": "Featured Projects",
+    "subtitle": "Our latest projects that we're proud to showcase",
+    "view_all": "View All Projects"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "One-Stop Service with domain and hosting included — ready to deliver",
+    "packages": [
+      {
+        "name": "One-Page Website",
+        "description": "Single-page website for SME businesses focused on conversion-driven design",
+        "features": ["Brand-aligned Design", "100% Responsive", "Basic SEO", "Domain + Hosting"],
+        "icon": "one-page"
+      },
+      {
+        "name": "Corporate Website",
+        "description": "Large-scale website with an easy-to-use Content Management System (CMS)",
+        "features": ["CMS for Content Management", "Multi-page Navigation", "Multi-language Support", "SSL + Analytics"],
+        "icon": "corporate"
+      },
+      {
+        "name": "Web Application & Dashboard",
+        "description": "Full-stack systems including dashboards, approval workflows, and data management",
+        "features": ["Login & Authentication", "Dashboard & Reports", "API Integration", "Notification System"],
+        "icon": "webapp"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Our past projects categorized by type",
+    "filters": {
+      "all": "All",
+      "corporate": "Corporate Websites",
+      "dashboard": "Systems & Dashboard",
+      "api": "API & Security",
+      "landing": "One-Page & Landing",
+      "ecommerce": "E-Commerce"
+    },
+    "view_project": "View Details",
+    "live_site": "Visit Live Site",
+    "demo": "Try Demo"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to hear your needs",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "budget": "Estimated Budget",
+      "budget_options": ["Under ฿10,000", "฿10,000 - ฿30,000", "฿30,000 - ฿100,000", "Over ฿100,000"],
+      "message": "Project Details",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information"
+    }
+  },
+  "footer": {
+    "tagline": "A superhero team ready to build websites and systems that drive your business forward",
+    "quick_links": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "contact_info": "Contact Info",
+    "email": "bighero.thailand@gmail.com",
+    "phone": "064-778-8954",
+    "line": "@bigherostudio",
+    "copyright": "© 2025 BigHero Studio. All rights reserved."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Common questions about our web development services",
+    "items": [
+      {
+        "q": "What types of websites does BigHero Studio develop?",
+        "a": "We develop all types of websites including Corporate Websites, E-Commerce platforms, Booking systems, Dashboards, and complex custom Web Applications."
+      },
+      {
+        "q": "What is the process of building a website with you?",
+        "a": "Our process includes: 1. Requirement gathering 2. Quotation & Timeline 3. UI/UX Design & Architecture 4. Development 5. Delivery & Basic Training."
+      },
+      {
+        "q": "Will my website rank on Google (SEO)?",
+        "a": "Yes, we build websites with a 100% SEO-friendly structure, including optimized Meta Tags, fast PageSpeed, and mobile responsiveness to give you the best chance of ranking."
+      },
+      {
+        "q": "Do you provide after-sales support?",
+        "a": "Absolutely. We offer a 1-year warranty for bug fixes and free consultation throughout the usage period."
+      }
+    ]
+  },
+  "standards": {
+    "title": "Our Development Standards",
+    "items": [
+      {
+        "title": "High Performance",
+        "desc": "Lightning-fast load times to keep your customers engaged.",
+        "icon": "⚡"
+      },
+      {
+        "title": "Enterprise Security",
+        "desc": "Advanced security measures to protect your business data.",
+        "icon": "🔒"
+      },
+      {
+        "title": "SEO & AI Ready",
+        "desc": "Optimized structure for top Google rankings and AI search.",
+        "icon": "📈"
+      },
+      {
+        "title": "100% Responsive",
+        "desc": "Flawless display and usability across all devices.",
+        "icon": "📱"
+      }
+    ]
+  },
+  "why_choose_us": {
+    "title": "Why Choose BigHero Studio?",
+    "subtitle": "Your digital superhero team ready to protect and grow your business",
+    "items": [
+      {
+        "title": "Super Fast Delivery",
+        "desc": "We deliver on time with regular updates. We never abandon projects.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Ultimate Protection",
+        "desc": "We prioritize system security like heroes protecting their city.",
+        "icon": "🛡️"
+      },
+      {
+        "title": "Limitless Creativity",
+        "desc": "Custom designs and systems built specifically for your business needs.",
+        "icon": "✨"
+      },
+      {
+        "title": "Trusted Partner",
+        "desc": "We offer consultation and the best advice, not just coding.",
+        "icon": "🤝"
+      }
+    ]
+  }
+}
