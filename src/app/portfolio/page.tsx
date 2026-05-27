@@ -56,7 +56,7 @@ export default function PortfolioPage() {
 
           {/* Project Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project: any) => (
               <div
                 key={project.id}
                 className="card-hover group rounded-3xl bg-white border border-slate-100 overflow-hidden"
@@ -113,7 +113,7 @@ export default function PortfolioPage() {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mt-4">
-                    {project.tags.map((tag) => (
+                    {project.tags.map((tag: string) => (
                       <span
                         key={tag}
                         className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-50 text-slate-500 border border-slate-100"
