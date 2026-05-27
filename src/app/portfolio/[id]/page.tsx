@@ -67,7 +67,7 @@ export default function ProjectDetail() {
           {project.title[locale as "th" | "en"]}
         </h1>
         <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {project.tags.map(tag => (
+          {project.tags.map((tag: string) => (
             <span key={tag} className="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary-50 text-primary-700 border border-primary-100">
               {tag}
             </span>
