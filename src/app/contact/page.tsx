@@ -83,6 +83,49 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <div className="rounded-3xl bg-white border border-slate-100 p-8 md:p-10 shadow-sm">
+                
+                {/* Quick Contact Channels */}
+                <div className="mb-8 p-6 bg-slate-50 border border-slate-100 rounded-2xl animate-fade-in-up">
+                  <div className="text-center mb-5">
+                    <h3 className="text-lg font-bold text-navy">
+                      {locale === "th" ? "ช่องทางติดต่อด่วน" : "Quick Contact Channels"}
+                    </h3>
+                    <p className="text-sm text-slate-500 mt-1">
+                      {locale === "th" ? "ทีมงานจะติดต่อกลับภายใน 1-3 ชั่วโมง (จันทร์ - ศุกร์)" : "Our team will reply within 1-3 hours (Mon-Fri)"}
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a
+                      href="https://line.me/R/ti/p/@bigherostudio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-6 py-4 bg-[#00B900] hover:bg-[#009900] text-white font-bold rounded-xl shadow-lg shadow-[#00B900]/20 transition-all hover:-translate-y-0.5"
+                    >
+                      <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.5 10.5c0-4.632-4.521-8.39-10.083-8.39C6.852 2.11 2.33 5.868 2.33 10.5c0 4.148 3.633 7.643 8.441 8.289.328.07.753.214.86.505.1.272.064.697.03 1.001-.004.032-.423 2.545-.52 3.101-.128.74.33 1.037.892.744 4.542-2.37 9.123-6.666 10.134-9.351C22.428 11.455 22.5 10.985 22.5 10.5"/>
+                      </svg>
+                      {locale === "th" ? "คุยผ่าน LINE" : "Chat on LINE"}
+                    </a>
+                    <a
+                      href="https://m.me/bigherostudio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-6 py-4 bg-[#0084FF] hover:bg-[#0073e6] text-white font-bold rounded-xl shadow-lg shadow-[#0084FF]/20 transition-all hover:-translate-y-0.5"
+                    >
+                      <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.14 2 11.25c0 2.926 1.487 5.534 3.82 7.234v3.292l3.52-1.944a10.9 10.9 0 002.66.33c5.523 0 10-4.14 10-9.25S17.523 2 12 2zm1.18 12.12l-2.61-2.79-5.11 2.79 5.6-5.96 2.62 2.79 5.1-2.79-5.6 5.96z"/>
+                      </svg>
+                      {locale === "th" ? "คุยผ่าน Messenger" : "Chat on Messenger"}
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4 mb-8 animate-fade-in-up">
+                  <div className="flex-1 h-px bg-slate-100" />
+                  <span className="text-sm text-slate-400 font-medium">{locale === "th" ? "หรือ ส่งข้อความให้เราติดต่อกลับ" : "Or leave a message for us"}</span>
+                  <div className="flex-1 h-px bg-slate-100" />
+                </div>
+
                 {submitted ? (
                   <div className="text-center py-16 animate-fade-in-up">
                     <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">

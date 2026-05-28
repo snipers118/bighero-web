@@ -147,7 +147,7 @@
       "en": "Conversion-focused landing page for SME business with contact form and analytics"
     },
     "tags": ["Fast Performance", "Modern UI", "SEO"],
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    "image": "/projects/sme_landing_banner.png",
     "link_type": "demo",
     "featured": false
   },
@@ -173,7 +173,7 @@
       "en": "Premium e-commerce platform with shopping cart, payment gateway, and real-time inventory management"
     },
     "tags": ["E-Commerce", "Payment Gateway", "Modern UI", "Cart"],
-    "image": "https://images.unsplash.com/photo-1516483638261-f40889f074d0?auto=format&fit=crop&w=800&q=80",
+    "image": "/projects/swimwear_banner.png",
     "link_type": "demo",
     "featured": true
   },
@@ -186,7 +186,7 @@
       "en": "Rugged, modern e-commerce platform for tactical gear with smart search and interactive UI"
     },
     "tags": ["E-Commerce", "Interactive UI", "Dark Theme"],
-    "image": "https://images.unsplash.com/photo-1534030616186-b4845ed3ebdd?auto=format&fit=crop&w=800&q=80",
+    "image": "https://picsum.photos/seed/tactical/800/600",
     "link_type": "demo",
     "featured": false
   },
@@ -199,7 +199,7 @@
       "en": "B2B construction company website showcasing prefab innovations with an interactive building configurator and cost estimator."
     },
     "tags": ["Corporate", "B2B", "Interactive Configurator"],
-    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+    "image": "https://picsum.photos/seed/prefab/800/600",
     "link_type": "demo",
     "featured": true
   },
@@ -212,7 +212,7 @@
       "en": "Premium e-commerce for cultural crafts and services with large cinematic banners and elegant product displays."
     },
     "tags": ["E-Commerce", "Premium UI", "Culture"],
-    "image": "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=80",
+    "image": "https://picsum.photos/seed/culture/800/600",
     "link_type": "demo",
     "featured": false
   },
@@ -225,7 +225,7 @@
       "en": "Logistics company website offering nationwide 4-wheel and 6-wheel truck freight services with an interactive fare estimator."
     },
     "tags": ["Corporate", "Logistics", "Fare Estimator"],
-    "image": "https://images.unsplash.com/photo-1586528116311-ad8ed7c83a00?auto=format&fit=crop&w=800&q=80",
+    "image": "/projects/logistics_transport_banner.png",
     "link_type": "demo",
     "featured": true
   },
@@ -329,7 +329,7 @@
       "en": "A clean, clinical-style e-commerce site for health supplements featuring trust badges and health-goal categorizations."
     },
     "tags": ["E-Commerce", "Health", "Supplements"],
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5e1281db2?auto=format&fit=crop&w=800&q=80",
+    "image": "/projects/health_supplements_banner.png",
     "link_type": "demo",
     "featured": true
   },
@@ -342,7 +342,7 @@
       "en": "A modern landing page for a wickerwork craft SME, featuring interactive animations and a premium rustic design."
     },
     "tags": ["Landing Page", "SME", "Craft", "Animation"],
-    "image": "https://images.unsplash.com/photo-1596414434771-46808803bb3c?auto=format&fit=crop&w=800&q=80",
+    "image": "/projects/wickerwork_sme_banner.png",
     "link_type": "demo",
     "featured": false
   },
@@ -395,6 +395,86 @@
     },
     "tags": ["E-Commerce", "Luxury", "Fashion", "Premium"],
     "image": "/LuxuryBrand/images/hero-bg.png",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "construction-residential",
+    "category": "corporate",
+    "title": { "th": "บริการรับสร้างบ้านหรูครบวงจร", "en": "Luxury Home Builder" },
+    "description": { "th": "เว็บไซต์บริษัทรับสร้างบ้านหรู พร้อมระบบโชว์ผลงาน 3D และอัปเดตความคืบหน้างาน", "en": "Luxury home builder with 3D portfolio and progress tracking." },
+    "tags": ["Construction", "Luxury"],
+    "image": "https://picsum.photos/seed/residence/800/600",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "construction-renovation",
+    "category": "corporate",
+    "title": { "th": "บริการออกแบบและรีโนเวทภายใน", "en": "Interior Design & Renovation" },
+    "description": { "th": "เว็บไซต์บริการรีโนเวท โชว์ภาพเปรียบเทียบ Before/After และคำนวณราคาเบื้องต้น", "en": "Renovation services with Before/After sliders and a basic cost calculator." },
+    "tags": ["Construction", "Interior Design"],
+    "image": "https://picsum.photos/seed/renovation/800/600",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "restaurant-finedining",
+    "category": "landing",
+    "title": { "th": "ร้านอาหาร Fine Dining ระดับพรีเมียม", "en": "Premium Fine Dining Restaurant" },
+    "description": { "th": "เว็บไซต์ร้านอาหารหรู พร้อมระบบรับจองโต๊ะล่วงหน้าและระบบมัดจำ", "en": "Fine dining restaurant with online table reservation and deposit system." },
+    "tags": ["Restaurant", "Fine Dining", "Booking"],
+    "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "restaurant-cafe",
+    "category": "landing",
+    "title": { "th": "คาเฟ่และเบเกอรี่สไตล์มินิมอล", "en": "Minimalist Cafe & Bakery" },
+    "description": { "th": "เว็บไซต์คาเฟ่ โชว์เมนูขนมหวานน่าทาน พร้อมระบบสั่งเดลิเวอรี่และรับหน้าร้าน", "en": "Cafe website showcasing delicious pastries with click-and-collect ordering." },
+    "tags": ["Restaurant", "Cafe"],
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "restaurant-buffet",
+    "category": "landing",
+    "title": { "th": "ร้านอาหารบุฟเฟ่ต์ชาบูและปิ้งย่าง", "en": "Shabu & BBQ Buffet" },
+    "description": { "th": "เว็บไซต์ร้านบุฟเฟ่ต์ อัปเดตโปรโมชัน แจ้งราคาชัดเจน พร้อมดูสาขาใกล้บ้าน", "en": "Buffet restaurant with clear pricing, dynamic promotions, and branch locator." },
+    "tags": ["Restaurant", "Buffet"],
+    "image": "https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?auto=format&fit=crop&w=800&q=80",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "school-international",
+    "category": "corporate",
+    "title": { "th": "โรงเรียนนานาชาติชั้นนำ", "en": "Leading International School" },
+    "description": { "th": "เว็บไซต์โรงเรียน 2 ภาษา เสนอข้อมูลหลักสูตรชัดเจน และระบบรับสมัครนักเรียนออนไลน์", "en": "Bilingual school website with clear curriculum details and online admissions." },
+    "tags": ["Education", "International School"],
+    "image": "/projects/school_international_banner.png",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "school-tutor",
+    "category": "landing",
+    "title": { "th": "สถาบันกวดวิชาออนไลน์และออฟไลน์", "en": "Tutor Academy" },
+    "description": { "th": "เว็บไซต์สถาบันกวดวิชา แสดงตารางคอร์สเรียน พร้อมระบบสมัครและชำระเงินออนไลน์", "en": "Tutoring center with interactive course schedules and online payment system." },
+    "tags": ["Education", "Tutor"],
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    "link_type": "demo",
+    "featured": false
+  },
+  {
+    "id": "school-music",
+    "category": "landing",
+    "title": { "th": "โรงเรียนสอนศิลปะและดนตรี", "en": "Art & Music Academy" },
+    "description": { "th": "เว็บไซต์สถาบันสอนศิลปะและดนตรี แกลเลอรีผลงานนักเรียน และระบบนัดทดลองเรียนฟรี", "en": "Art and music school with student galleries and free trial booking." },
+    "tags": ["Education", "Art & Music"],
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   }

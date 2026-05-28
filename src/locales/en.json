@@ -7,11 +7,11 @@
     "language": "TH"
   },
   "hero": {
-    "title": "Complete Solutions",
-    "subtitle": "For Websites & Backend Systems",
-    "description": "A superhero team ready to build websites and systems that drive your business forward",
-    "cta_primary": "View All Projects",
-    "cta_secondary": "Free Consultation"
+    "title": "Websites that Build Credibility",
+    "subtitle": "And Generate New Leads 24/7",
+    "description": "Not just a pretty website, but a business growth tool. We develop websites and business systems for Enterprises, Companies, and SMEs.",
+    "cta_primary": "Free Consultation",
+    "cta_secondary": "Get a Quote"
   },
   "techstack": {
     "title": "Technologies We Master"
@@ -44,6 +44,96 @@
         "icon": "webapp"
       }
     ]
+  },
+  "pricing": {
+    "promo_banner": "Launch Promotion — Only for the first 10 clients in June 2026",
+    "title": "Promotional Packages",
+    "subtitle": "Choose the right package for your business",
+    "packages": [
+      {
+        "id": "one-page",
+        "name": "One-Page Website",
+        "description": "For SMEs needing a conversion-focused single page",
+        "original_price": "฿5,500",
+        "price": "฿2,990",
+        "save_badge": "Save ฿2,510",
+        "features": [
+          "Custom Brand Design",
+          "100% Responsive",
+          "Basic SEO",
+          "Domain + Hosting + SSL (1 Yr Free)",
+          "Contact Form + Google Map",
+          "2 Free Revisions"
+        ],
+        "cta": "Book Now"
+      },
+      {
+        "id": "corporate",
+        "name": "Corporate Website",
+        "description": "Multi-page with CMS to manage content, scalable",
+        "original_price": "฿12,900",
+        "price": "฿7,900",
+        "save_badge": "Save ฿5,000",
+        "features": [
+          "Multiple Pages & Menus",
+          "Self-managed CMS",
+          "News / Blog System",
+          "Bilingual Support",
+          "SSL + Google Analytics",
+          "1 Team Training Session"
+        ],
+        "cta": "Book Now",
+        "popular": true
+      },
+      {
+        "id": "ecommerce",
+        "name": "E-Commerce Website",
+        "description": "Complete online store, payments, stock, orders",
+        "original_price": "฿18,900",
+        "price": "฿14,900",
+        "save_badge": "Save ฿4,000",
+        "features": [
+          "Products & Categories",
+          "QR / Bank / Card Payments",
+          "Order Management & Alerts",
+          "Inventory System",
+          "100% Responsive",
+          "SSL + Analytics"
+        ],
+        "cta": "Book Now"
+      }
+    ],
+    "webapp": {
+      "name": "Web Application & Dashboard",
+      "description": "Complex Full-stack systems such as Booking, Dashboards, Approvals, API Integrations — Built to exact requirements",
+      "starting_price_label": "Starting at",
+      "price": "฿18,000",
+      "tags": ["Next.js / Laravel", "Login & Auth", "Real-time Dashboard", "API Integration"],
+      "cta": "Free Consultation"
+    },
+    "disclaimer": "* Promo prices for first 10 clients only · 2 revisions guaranteed · Free consultation before deciding"
+  },
+  "target_audience": {
+    "title": "Who is this for?",
+    "items": ["Companies", "Contractors", "Restaurants", "Hotels / Resorts", "Enterprises", "SMEs", "Educational Institutions"]
+  },
+  "workflow": {
+    "title": "Our Work Process",
+    "subtitle": "Systematic work, on-time delivery, no abandonment",
+    "steps": [
+      "Discuss Requirements",
+      "Website Structure Planning",
+      "UI Design",
+      "Development",
+      "Review and Refine",
+      "Launch",
+      "After-sales Support"
+    ]
+  },
+  "seo_section": {
+    "title": "Modern Websites Must Support SEO + AEO + GEO",
+    "subtitle": "So customers can find you on Google and AI Search (ChatGPT, Gemini, Perplexity)",
+    "description": "We design website structures following international standards, fully supporting SEO to give your business a competitive edge in the AI era."
   },
   "portfolio": {
     "title": "Portfolio",
@@ -135,28 +225,28 @@
     ]
   },
   "why_choose_us": {
-    "title": "Why Choose BigHero Studio?",
-    "subtitle": "Your digital superhero team ready to protect and grow your business",
+    "title": "Our Differences",
+    "subtitle": "We don't just build standard websites; we develop them into business systems.",
     "items": [
       {
-        "title": "Super Fast Delivery",
-        "desc": "We deliver on time with regular updates. We never abandon projects.",
-        "icon": "🚀"
+        "title": "System Design & Architecture",
+        "desc": "Designing scalable system architectures for future business growth.",
+        "icon": "🏗️"
       },
       {
-        "title": "Ultimate Protection",
-        "desc": "We prioritize system security like heroes protecting their city.",
-        "icon": "🛡️"
+        "title": "API & Dashboard",
+        "desc": "Developing APIs for backend integration and Executive Dashboards.",
+        "icon": "📊"
       },
       {
-        "title": "Limitless Creativity",
-        "desc": "Custom designs and systems built specifically for your business needs.",
-        "icon": "✨"
+        "title": "Enterprise Features",
+        "desc": "Supporting complex Authentication, scalable Databases, and Enterprise management.",
+        "icon": "🏢"
       },
       {
-        "title": "Trusted Partner",
-        "desc": "We offer consultation and the best advice, not just coding.",
-        "icon": "🤝"
+        "title": "Modern Frameworks",
+        "desc": "Built with the latest technologies like CI4, Laravel, and Next.js for speed and security.",
+        "icon": "⚡"
       }
     ]
   }

@@ -2,12 +2,23 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const pathname = usePathname();
   const { t, locale } = useLanguage();
 
   const currentYear = new Date().getFullYear();
+
+  if (
+    pathname === "/promo" ||
+    pathname.startsWith("/construction") ||
+    pathname.startsWith("/restaurant") ||
+    pathname.startsWith("/school")
+  ) {
+    return null;
+  }
 
   return (
     <footer className="bg-navy text-white">
@@ -124,16 +135,35 @@ export default function Footer() {
                 <span className="text-sm text-slate-400 leading-tight block pt-0.5">{t("footer.phone") as string}</span>
               </li>
               <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-[#00B900] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.5 10.5c0-4.632-4.521-8.39-10.083-8.39C6.852 2.11 2.33 5.868 2.33 10.5c0 4.148 3.633 7.643 8.441 8.289.328.07.753.214.86.505.1.272.064.697.03 1.001-.004.032-.423 2.545-.52 3.101-.128.74.33 1.037.892.744 4.542-2.37 9.123-6.666 10.134-9.351C22.428 11.455 22.5 10.985 22.5 10.5"/>
+                </svg>
+                <span className="text-sm text-slate-400 leading-tight block pt-0.5">{t("footer.line") as string}</span>
+              </li>
+              <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
                 <span className="text-sm text-slate-400 leading-tight block break-all pt-0.5">{t("footer.email") as string}</span>
               </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#00B900] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M22.5 10.5c0-4.632-4.521-8.39-10.083-8.39C6.852 2.11 2.33 5.868 2.33 10.5c0 4.148 3.633 7.643 8.441 8.289.328.07.753.214.86.505.1.272.064.697.03 1.001-.004.032-.423 2.545-.52 3.101-.128.74.33 1.037.892.744 4.542-2.37 9.123-6.666 10.134-9.351C22.428 11.455 22.5 10.985 22.5 10.5"/>
+              <li className="flex items-start gap-3 mt-4 pt-4 border-t border-slate-700">
+                <svg className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
-                <span className="text-sm text-slate-400 leading-tight block pt-0.5">{t("footer.line") as string}</span>
+                <span className="text-sm text-slate-400 leading-tight block pt-0.5">
+                  <strong className="text-white block mb-1">{locale === "th" ? "พื้นที่ให้บริการ" : "Service Area"}</strong>
+                  {locale === "th" ? "รับงานทั่วประเทศไทย และต่างประเทศ" : "Available across Thailand & Internationally"}
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm text-slate-400 leading-tight block pt-0.5">
+                  <strong className="text-white block mb-1">{locale === "th" ? "เวลาทำการ" : "Operating Hours"}</strong>
+                  {locale === "th" ? "จันทร์ - ศุกร์ : 09:00 - 18:00 น." : "Mon - Fri : 09:00 AM - 06:00 PM"}
+                </span>
               </li>
             </ul>
           </div>

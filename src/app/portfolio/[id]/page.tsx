@@ -30,8 +30,14 @@ import MushroomDemo from "@/components/demos/MushroomDemo";
 import RakMakDemo from "@/components/demos/RakMakDemo";
 import SAPDemo from "@/components/demos/SAPDemo";
 import LuxuryBrandDemo from "@/components/demos/LuxuryBrandDemo";
+import RestaurantFineDiningDemo from "@/components/demos/RestaurantFineDiningDemo";
+import RestaurantCafeDemo from "@/components/demos/RestaurantCafeDemo";
+import RestaurantBuffetDemo from "@/components/demos/RestaurantBuffetDemo";
+import SchoolTutorDemo from "@/components/demos/SchoolTutorDemo";
+import SchoolMusicDemo from "@/components/demos/SchoolMusicDemo";
+import SchoolInternationalDemo from "@/components/demos/SchoolInternationalDemo";
 
-const DEMO_PROJECTS = ["zoom-booking", "sso-system", "sroi-platform", "gov-website", "corporate-web-1", "corporate-web-2", "landing-sme", "ecommerce-swimwear", "ecommerce-tactical", "corporate-prefab", "ecommerce-culture", "corporate-transport", "ecommerce-fashion", "landing-realestate", "ecommerce-jewelry", "ecommerce-gadget", "corporate-tour", "corporate-hotel", "corporate-spa", "ecommerce-health", "landing-wickerwork", "landing-mushroom", "landing-rakmak", "landing-sap", "ecommerce-luxury"];
+const DEMO_PROJECTS = ["zoom-booking", "sso-system", "sroi-platform", "gov-website", "corporate-web-1", "corporate-web-2", "landing-sme", "ecommerce-swimwear", "ecommerce-tactical", "corporate-prefab", "ecommerce-culture", "corporate-transport", "ecommerce-fashion", "landing-realestate", "ecommerce-jewelry", "ecommerce-gadget", "corporate-tour", "corporate-hotel", "corporate-spa", "ecommerce-health", "landing-wickerwork", "landing-mushroom", "landing-rakmak", "landing-sap", "ecommerce-luxury", "restaurant-finedining", "restaurant-cafe", "restaurant-buffet", "school-tutor", "school-music", "school-international"];
 
 export default function ProjectDetail() {
   const params = useParams();
@@ -130,6 +136,18 @@ export default function ProjectDetail() {
           <SAPDemo />
         ) : project.id === "ecommerce-luxury" ? (
           <LuxuryBrandDemo />
+        ) : project.id === "restaurant-finedining" ? (
+          <RestaurantFineDiningDemo />
+        ) : project.id === "restaurant-cafe" ? (
+          <RestaurantCafeDemo />
+        ) : project.id === "restaurant-buffet" ? (
+          <RestaurantBuffetDemo />
+        ) : project.id === "school-tutor" ? (
+          <SchoolTutorDemo />
+        ) : project.id === "school-music" ? (
+          <SchoolMusicDemo />
+        ) : project.id === "school-international" ? (
+          <SchoolInternationalDemo />
         ) : (
           <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 rounded-3xl flex items-center justify-center shadow-2xl border border-slate-100 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #1e3fec 2px, transparent 2px)", backgroundSize: "32px 32px" }}></div>

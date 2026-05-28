@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const { t, locale, switchLocale } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,6 +17,15 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (
+    pathname === "/promo" ||
+    pathname.startsWith("/construction") ||
+    pathname.startsWith("/restaurant") ||
+    pathname.startsWith("/school")
+  ) {
+    return null;
+  }
 
   const navLinks = [
     { href: "/", label: t("nav.home") as string },
