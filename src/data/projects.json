@@ -8,7 +8,7 @@
       "en": "SROI calculation platform with data visualization dashboard, Excel import, and automated approval workflow"
     },
     "tags": ["Custom System", "Dashboard", "Automation", "Excel Import"],
-    "image": "/projects/sroi.jpg",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true,
     "features": {
@@ -39,7 +39,7 @@
       "en": "A modern, user-centric government website prototype featuring Accessibility tools, an E-Service Portal, and Mega Menu navigation."
     },
     "tags": ["GovTech", "Accessibility", "E-Service", "UX/UI"],
-    "image": "/projects/gov.jpg",
+    "image": "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true,
     "features": {
@@ -88,7 +88,7 @@
       ]
     },
     "tags": ["Backend System", "Zoom API", "Telegram Bot", "Automation"],
-    "image": "/projects/zoom.jpg",
+    "image": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -121,7 +121,7 @@
       ]
     },
     "tags": ["SSO", "Active Directory", "OAuth 2.0", "2FA", "Security"],
-    "image": "/projects/sso.jpg",
+    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -134,7 +134,7 @@
       "en": "Government agency website with easy-to-use CMS, fully responsive across all devices"
     },
     "tags": ["CMS System", "Responsive"],
-    "image": "/projects/corporate1.jpg",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -147,7 +147,7 @@
       "en": "Conversion-focused landing page for SME business with contact form and analytics"
     },
     "tags": ["Fast Performance", "Modern UI", "SEO"],
-    "image": "/projects/landing.jpg",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -160,7 +160,7 @@
       "en": "Large-scale corporate website with news, events, and gallery management system"
     },
     "tags": ["CMS System", "Multi-language"],
-    "image": "/projects/corporate2.jpg",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -173,7 +173,7 @@
       "en": "Premium e-commerce platform with shopping cart, payment gateway, and real-time inventory management"
     },
     "tags": ["E-Commerce", "Payment Gateway", "Modern UI", "Cart"],
-    "image": "/projects/ecommerce.jpg",
+    "image": "https://images.unsplash.com/photo-1516483638261-f40889f074d0?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -186,7 +186,7 @@
       "en": "Rugged, modern e-commerce platform for tactical gear with smart search and interactive UI"
     },
     "tags": ["E-Commerce", "Interactive UI", "Dark Theme"],
-    "image": "/projects/ecommerce2.jpg",
+    "image": "https://images.unsplash.com/photo-1534030616186-b4845ed3ebdd?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -199,7 +199,7 @@
       "en": "B2B construction company website showcasing prefab innovations with an interactive building configurator and cost estimator."
     },
     "tags": ["Corporate", "B2B", "Interactive Configurator"],
-    "image": "/projects/corporate3.jpg",
+    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -212,7 +212,7 @@
       "en": "Premium e-commerce for cultural crafts and services with large cinematic banners and elegant product displays."
     },
     "tags": ["E-Commerce", "Premium UI", "Culture"],
-    "image": "/projects/culture.jpg",
+    "image": "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -225,7 +225,7 @@
       "en": "Logistics company website offering nationwide 4-wheel and 6-wheel truck freight services with an interactive fare estimator."
     },
     "tags": ["Corporate", "Logistics", "Fare Estimator"],
-    "image": "/projects/logistics.jpg",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8ed7c83a00?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -238,7 +238,7 @@
       "en": "Minimalist women's fashion boutique with size/color selection and a modern Quick View feature, optimized for mobile."
     },
     "tags": ["E-Commerce", "Minimalist", "Fashion"],
-    "image": "/projects/fashion.jpg",
+    "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -251,7 +251,7 @@
       "en": "High-end real estate landing page focusing on large, stunning imagery, interactive floor plans, and premium facilities."
     },
     "tags": ["Real Estate", "Luxury UI", "Landing Page"],
-    "image": "/projects/realestate.jpg",
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -264,7 +264,7 @@
       "en": "Luxury jewelry e-commerce featuring an editorial magazine layout to showcase diamonds and gold elegantly."
     },
     "tags": ["E-Commerce", "High Jewelry", "Magazine Layout"],
-    "image": "/projects/jewelry.jpg",
+    "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -277,7 +277,7 @@
       "en": "Clean and modern IT store featuring interactive product color switching and futuristic hover effects."
     },
     "tags": ["E-Commerce", "Tech & Gadget", "Interactive UI"],
-    "image": "/projects/gadget.jpg",
+    "image": "https://images.unsplash.com/photo-1511385348-a52b4a160dc2?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -290,7 +290,7 @@
       "en": "A highly credible tour agency website featuring tour program search, itineraries, and prominent tourism license displays."
     },
     "tags": ["Corporate", "Travel", "High Trust"],
-    "image": "/projects/tour.jpg",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -303,7 +303,7 @@
       "en": "A serene luxury beach resort website featuring stunning ocean views, room booking widget, and elegant design."
     },
     "tags": ["Corporate", "Hospitality", "Booking"],
-    "image": "/projects/hotel.jpg",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -316,7 +316,7 @@
       "en": "A relaxing wellness and spa website featuring earthy tones, service menus, and an appointment booking system."
     },
     "tags": ["Corporate", "Wellness", "Service"],
-    "image": "/projects/spa.jpg",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -329,7 +329,7 @@
       "en": "A clean, clinical-style e-commerce site for health supplements featuring trust badges and health-goal categorizations."
     },
     "tags": ["E-Commerce", "Health", "Supplements"],
-    "image": "/projects/health.jpg",
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5e1281db2?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": true
   },
@@ -342,7 +342,7 @@
       "en": "A modern landing page for a wickerwork craft SME, featuring interactive animations and a premium rustic design."
     },
     "tags": ["Landing Page", "SME", "Craft", "Animation"],
-    "image": "/projects/wickerwork.jpg",
+    "image": "https://images.unsplash.com/photo-1596414434771-46808803bb3c?auto=format&fit=crop&w=800&q=80",
     "link_type": "demo",
     "featured": false
   },
@@ -355,7 +355,7 @@
       "en": "Comprehensive landing page for a mushroom farm, featuring spore bags, processed products, and B2B consulting services."
     },
     "tags": ["Landing Page", "Agriculture", "B2B", "E-Commerce"],
-    "image": "/projects/mushroom.jpg",
+    "image": "/projects/mushroom_banner.png",
     "link_type": "demo",
     "featured": true
   },
@@ -394,7 +394,7 @@
       "en": "Premium e-commerce website designed for a luxury fashion brand."
     },
     "tags": ["E-Commerce", "Luxury", "Fashion", "Premium"],
-    "image": "/LuxuryBrand/images/hero-bg.jpg",
+    "image": "/LuxuryBrand/images/hero-bg.png",
     "link_type": "demo",
     "featured": false
   }

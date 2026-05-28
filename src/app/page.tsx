@@ -357,14 +357,28 @@ export default function HomePage() {
                   className="card-hover group rounded-3xl bg-white border border-slate-100 overflow-hidden shadow-sm h-full"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
-                  {/* Image placeholder with premium gradient */}
-                  <div className="relative h-56 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                      <div className="w-20 h-20 rounded-3xl bg-white flex items-center justify-center shadow-xl">
-                        <span className="text-4xl drop-shadow-md">
-                          {project.category === "dashboard" ? "📊" : project.category === "api" ? "🔐" : "🌐"}
-                        </span>
+                  {/* Image Area - Unified Mockup Style */}
+                  <div className="relative h-64 bg-slate-100 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center pt-10 px-8 group-hover:px-6 group-hover:pt-8 transition-all duration-500">
+                      <div className="w-full h-full relative rounded-t-2xl bg-white shadow-xl border border-slate-200 overflow-hidden flex flex-col group-hover:shadow-2xl transition-all duration-500">
+                        {/* Browser Top Bar */}
+                        <div className="h-7 bg-slate-50 border-b border-slate-100 flex items-center px-4 gap-2 shrink-0">
+                          <div className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                        </div>
+                        {/* Image inside mockup */}
+                        <div className="relative flex-1 bg-slate-50">
+                          <img 
+                            src={project.image || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"} 
+                            alt={project.title.en} 
+                            className="object-cover object-top w-full h-full"
+                            onError={(e) => {
+                              e.currentTarget.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80";
+                            }}
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="absolute top-4 right-4 z-20">

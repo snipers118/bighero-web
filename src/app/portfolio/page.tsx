@@ -61,41 +61,38 @@ export default function PortfolioPage() {
                 key={project.id}
                 className="card-hover group rounded-3xl bg-white border border-slate-100 overflow-hidden"
               >
-                {/* Image */}
-                <div className="relative h-52 bg-gradient-to-br from-primary-100 to-primary-50 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-2xl bg-white/80 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-3xl">
-                        {project.category === "dashboard"
-                          ? "📊"
-                          : project.category === "api"
-                          ? "🔐"
-                          : project.category === "landing"
-                          ? "📄"
-                          : "🏢"}
-                      </span>
+                {/* Image Area - Unified Mockup Style */}
+                <div className="relative h-56 bg-slate-100 overflow-hidden group-hover:bg-slate-200/50 transition-colors duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center pt-8 px-6 group-hover:px-4 group-hover:pt-6 transition-all duration-500">
+                    <div className="w-full h-full relative rounded-t-xl bg-white shadow-lg border border-slate-200 overflow-hidden flex flex-col group-hover:shadow-2xl transition-all duration-500">
+                      {/* Browser Top Bar */}
+                      <div className="h-6 bg-slate-50 border-b border-slate-100 flex items-center px-3 gap-1.5 shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-rose-400" />
+                        <div className="w-2 h-2 rounded-full bg-amber-400" />
+                        <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                      </div>
+                      {/* Image inside mockup */}
+                      <div className="relative flex-1 bg-slate-50">
+                        <img 
+                          src={project.image || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"} 
+                          alt={project.title.en} 
+                          className="object-cover object-top w-full h-full"
+                          onError={(e) => {
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80";
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
-
-                  {/* Link Type Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
-                        project.link_type === "demo"
-                          ? "bg-amber-100/90 text-amber-700"
-                          : "bg-green-100/90 text-green-700"
-                      }`}
-                    >
-                      {project.link_type === "demo"
-                        ? "🎮 Demo"
-                        : "🌐 Live"}
+                  {/* Badges */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-md shadow-sm ${project.link_type === "demo" ? "bg-amber-100/90 text-amber-800" : "bg-green-100/90 text-green-800"}`}>
+                      {project.link_type === "demo" ? "🎮 Demo" : "🌐 Live"}
                     </span>
                   </div>
-
-                  {/* Featured badge */}
                   {project.featured && (
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary-500/90 text-white backdrop-blur-sm">
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary-500/90 text-white backdrop-blur-md shadow-sm">
                         ⭐ {locale === "th" ? "แนะนำ" : "Featured"}
                       </span>
                     </div>
