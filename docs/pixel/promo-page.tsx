@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Turnstile } from "@marsidev/react-turnstile";
-import { trackLead } from "@/lib/fpixel";
+import { trackLead } from "@/lib/fpixel"; // ✅ เพิ่มบรรทัดนี้
 
 export default function PromoPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -22,7 +22,7 @@ export default function PromoPage() {
     const data = {
       name: formData.get("name"),
       phone: formData.get("phone"),
-      email: formData.get("phone") + "@promo.lead", // Mock email since backend might require it, but we only ask for phone
+      email: formData.get("phone") + "@promo.lead",
       budget: formData.get("budget"),
       message: `[PROMO LEAD] สนใจแพ็กเกจ: ${formData.get("budget")}`,
       turnstileToken: turnstileToken,
@@ -220,7 +220,6 @@ export default function PromoPage() {
           </h2>
           <div className="space-y-4">
             
-            {/* Pkg 1 */}
             <div 
               onClick={() => handleScrollToForm("เว็บไซต์ One-Page (฿2,990)")}
               className="p-6 bg-white rounded-2xl border-2 border-slate-200 hover:border-primary-400 cursor-pointer transition-all flex items-center justify-between group shadow-sm hover:shadow-md"
@@ -235,7 +234,6 @@ export default function PromoPage() {
               </div>
             </div>
 
-            {/* Pkg 2 */}
             <div 
               onClick={() => handleScrollToForm("เว็บไซต์องค์กร (฿7,900)")}
               className="p-6 bg-white rounded-2xl border-2 border-primary-500 cursor-pointer transition-all flex items-center justify-between relative shadow-lg shadow-primary-500/10 group transform md:-translate-y-1"
@@ -253,7 +251,6 @@ export default function PromoPage() {
               </div>
             </div>
 
-            {/* Pkg 3 */}
             <div 
               onClick={() => handleScrollToForm("Web App / Dashboard (฿18,000+)")}
               className="p-6 bg-white rounded-2xl border-2 border-slate-200 hover:border-primary-400 cursor-pointer transition-all flex items-center justify-between group shadow-sm hover:shadow-md"
@@ -299,7 +296,6 @@ export default function PromoPage() {
               <div className="flex-1 h-px bg-slate-100" />
             </div>
 
-            {/* Form */}
             {submitted ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
