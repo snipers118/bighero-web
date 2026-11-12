@@ -388,7 +388,7 @@ export default function SAPDemo() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-6 text-center text-white/30 text-xs max-w-4xl mx-auto">
-          <p>© 2567 เครื่องแกงตำมือ หมู่ 19 | สร้างด้วย ❤️ เพื่อคนรักอาหารใต้</p>
+          <p>© 2569 เครื่องแกงตำมือ หมู่ 19 | สร้างด้วย ❤️ เพื่อคนรักอาหารใต้</p>
           <p className="mt-2">Demo 2: "จัดจ้าน สะอาด น่าสั่งไปติดครัว" | กลุ่มอาหารพื้นถิ่น</p>
         </div>
       </footer>

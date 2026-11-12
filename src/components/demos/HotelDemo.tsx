@@ -149,11 +149,11 @@ export default function HotelDemo() {
          <div className="absolute -bottom-10 lg:-bottom-12 w-[90%] max-w-5xl bg-white shadow-2xl z-20 flex flex-col md:flex-row border border-gray-100 animate-fade-in-up" style={{animationDelay: '300ms'}}>
             <div className="flex-1 p-6 md:p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-100">
                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{t.checkin}</p>
-               <p className="text-lg font-serif text-[#112233]">28 May 2026</p>
+               <p className="text-lg font-serif text-[#112233]">28 Nov 2026</p>
             </div>
             <div className="flex-1 p-6 md:p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-100">
                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{t.checkout}</p>
-               <p className="text-lg font-serif text-[#112233]">30 May 2026</p>
+               <p className="text-lg font-serif text-[#112233]">30 Nov 2026</p>
             </div>
             <div className="flex-1 p-6 md:p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-100">
                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-2">{t.guests}</p>

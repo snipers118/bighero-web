@@ -91,7 +91,7 @@ export default function NichePromoTemplate({
             <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            เหลือเพียง 7 สิทธิ์ — โปรโมชันเดือนนี้เท่านั้น
+            เหลือเพียง 7 สิทธิ์ — โปรโมชันเดือนพฤศจิกายน 2569 เท่านั้น
           </div>
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-4 tracking-tight animate-fade-in-up animation-delay-100">

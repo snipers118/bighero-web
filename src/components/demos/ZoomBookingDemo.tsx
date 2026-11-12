@@ -8,21 +8,21 @@ import { useState } from "react";
 
 // ─── Mock Data ───────────────────────────────────────────────────
 const BOOKINGS = [
-  { id: 7, requester: "user_a", topic: "ทดสอบการอนุมัติผ่าน Telegram Bot", date: "18 พ.ค. 2569", time: "08:00 - 09:00", status: "approved" },
-  { id: 6, requester: "user_b", topic: "โครงการยกระดับการศึกษาด้านวิทยาศาสตร์และเทคโนโลยี", date: "4 มิ.ย. 2569", time: "12:00 - 17:00", status: "approved" },
-  { id: 5, requester: "user_a", topic: "ทดสอบการแจ้งเตือนอีเมล", date: "4 พ.ค. 2569", time: "12:00 - 13:00", status: "approved" },
-  { id: 4, requester: "user_c", topic: "ทดสอบการใช้งานระบบจองดี Zoom", date: "24 เม.ย. 2569", time: "12:00 - 12:00", status: "approved" },
-  { id: 3, requester: "user_a", topic: "ทดสอบ Telegram", date: "2 พ.ค. 2569", time: "12:00 - 13:00", status: "approved" },
-  { id: 2, requester: "user_a", topic: "ทดสอบการแจ้งเตือนอีเมล", date: "30 เม.ย. 2569", time: "15:00 - 16:00", status: "approved" },
-  { id: 1, requester: "user_a", topic: "ทดสอบ", date: "30 เม.ย. 2569", time: "12:00 - 13:00", status: "approved" },
+  { id: 7, requester: "user_a", topic: "ทดสอบการอนุมัติผ่าน Telegram Bot", date: "18 พ.ย. 2569", time: "08:00 - 09:00", status: "approved" },
+  { id: 6, requester: "user_b", topic: "โครงการยกระดับการศึกษาด้านวิทยาศาสตร์และเทคโนโลยี", date: "25 พ.ย. 2569", time: "12:00 - 17:00", status: "approved" },
+  { id: 5, requester: "user_a", topic: "ทดสอบการแจ้งเตือนอีเมล", date: "12 พ.ย. 2569", time: "12:00 - 13:00", status: "approved" },
+  { id: 4, requester: "user_c", topic: "ทดสอบการใช้งานระบบจองดี Zoom", date: "5 พ.ย. 2569", time: "12:00 - 12:00", status: "approved" },
+  { id: 3, requester: "user_a", topic: "ทดสอบ Telegram", date: "2 พ.ย. 2569", time: "12:00 - 13:00", status: "approved" },
+  { id: 2, requester: "user_a", topic: "ทดสอบการแจ้งเตือนอีเมล", date: "30 ต.ค. 2569", time: "15:00 - 16:00", status: "approved" },
+  { id: 1, requester: "user_a", topic: "ทดสอบ", date: "30 ต.ค. 2569", time: "12:00 - 13:00", status: "approved" },
 ];
 
 const CALENDAR_EVENTS: Record<number, string[]> = {
-  1: ["12 ทดสอบ (user_a)"],
   2: ["12 ทดสอบ Telegram"],
-  4: ["12 ทดสอบการแจ้ง..."],
+  5: ["12 ทดสอบการใช้งาน..."],
+  12: ["12 ทดสอบการแจ้ง..."],
   18: ["08 ทดสอบการอนุมัติ..."],
-  27: [],
+  25: ["12 โครงการยกระดับ..."],
 };
 
 const DEPARTMENTS = [
@@ -274,9 +274,9 @@ function BookingFormView() {
 }
 
 function CalendarView() {
-  const daysInMonth = 31;
-  const startDay = 4; // May 2026 starts on Friday (0=Sun)
-  const today = 27;
+  const daysInMonth = 30;
+  const startDay = 0; // November 2026 starts on Sunday (0=Sun)
+  const today = 12;
   const days = ["อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์"];
 
   const cells = [];
@@ -330,7 +330,7 @@ function CalendarView() {
               </button>
               <span className="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 text-slate-600 cursor-pointer">วันนี้</span>
             </div>
-            <span className="text-xl font-bold text-navy">พฤษภาคม 2569</span>
+            <span className="text-xl font-bold text-navy">พฤศจิกายน 2569</span>
             <div className="flex border border-slate-200 rounded-lg overflow-hidden">
               <span className="px-3 py-1.5 text-xs font-medium bg-navy text-white cursor-pointer">เดือน</span>
               <span className="px-3 py-1.5 text-xs font-medium text-slate-500 hover:bg-slate-50 cursor-pointer border-x border-slate-200">สัปดาห์</span>
@@ -359,8 +359,8 @@ function TelegramView() {
   const [approved, setApproved] = useState<Record<number, string>>({});
 
   const requests = [
-    { id: 1, user: "user_a", topic: "ประชุมคณะกรรมการบริหาร", date: "28 พ.ค. 2569", time: "09:00 - 11:00" },
-    { id: 2, user: "user_b", topic: "อบรมเชิงปฏิบัติการ AI", date: "29 พ.ค. 2569", time: "13:00 - 16:00" },
+    { id: 1, user: "user_a", topic: "ประชุมคณะกรรมการบริหาร", date: "28 พ.ย. 2569", time: "09:00 - 11:00" },
+    { id: 2, user: "user_b", topic: "อบรมเชิงปฏิบัติการ AI", date: "29 พ.ย. 2569", time: "13:00 - 16:00" },
   ];
 
   return (

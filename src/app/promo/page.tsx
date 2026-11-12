@@ -88,7 +88,7 @@ export default function PromoPage() {
             <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            เหลือเพียง 7 สิทธิ์ — โปรโมชันเดือนนี้เท่านั้น
+            เหลือเพียง 7 สิทธิ์ — โปรโมชันเดือนพฤศจิกายน 2569 เท่านั้น
           </div>
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-4 tracking-tight animate-fade-in-up animation-delay-100">
@@ -187,6 +187,8 @@ export default function PromoPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
+              { tag: "FinTech Platform", title: "ศูนย์กลางแลกเปลี่ยนคะแนนสะสม", desc: "Point Clearing House + คำนวณเรทเรียลไทม์", slug: "tpd-paypoint" },
+              { tag: "E-Submission", title: "ระบบจริยธรรมการวิจัยในมนุษย์", desc: "ยื่นโครงการ + ติดตามผล + ออกใบรับรอง COA", slug: "ethics-research" },
               { tag: "E-Commerce", title: "ร้านชุดว่ายน้ำ", desc: "ระบบตะกร้า + ชำระเงิน", slug: "ecommerce-swimwear" },
               { tag: "Landing Page", title: "ฟาร์มเห็ดครบวงจร", desc: "B2B + ปิดการขาย", slug: "landing-mushroom" },
               { tag: "Dashboard", title: "ระบบ SROI", desc: "Import Excel + อนุมัติ", slug: "sroi-platform" },

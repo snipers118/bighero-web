@@ -22,9 +22,9 @@ const SESSIONS = [
 ];
 
 const AUTH_APPS = [
-  { id: 1, name: "Zoom Booking System", date: "27 May 2026, 10:55", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "Z", color: "bg-blue-500" },
-  { id: 2, name: "E-Document System", date: "27 May 2026, 11:21", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "E", color: "bg-green-500" },
-  { id: 3, name: "HR Management", date: "26 May 2026, 09:14", browser: "Microsoft Edge บน Windows", ip: "192.168.x.x", initial: "H", color: "bg-purple-500" },
+  { id: 1, name: "Zoom Booking System", date: "12 Nov 2026, 10:55", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "Z", color: "bg-blue-500" },
+  { id: 2, name: "E-Document System", date: "12 Nov 2026, 11:21", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "E", color: "bg-green-500" },
+  { id: 3, name: "HR Management", date: "11 Nov 2026, 09:14", browser: "Microsoft Edge บน Windows", ip: "192.168.x.x", initial: "H", color: "bg-purple-500" },
 ];
 
 const LOGS = [
@@ -39,22 +39,22 @@ const LOGS = [
 ];
 
 const ADMINS = [
-  { id: 1, name: "Super Admin", email: "admin@example.org", role: "Super Admin", twoFA: true, lastLogin: "27 พ.ค. 2569 11:21" },
-  { id: 2, name: "IT Manager", email: "it_mgr@example.org", role: "Admin", twoFA: true, lastLogin: "26 พ.ค. 2569 15:30" },
-  { id: 3, name: "Help Desk", email: "helpdesk@example.org", role: "Viewer", twoFA: false, lastLogin: "25 พ.ค. 2569 09:00" },
+  { id: 1, name: "Super Admin", email: "admin@example.org", role: "Super Admin", twoFA: true, lastLogin: "12 พ.ย. 2569 11:21" },
+  { id: 2, name: "IT Manager", email: "it_mgr@example.org", role: "Admin", twoFA: true, lastLogin: "11 พ.ย. 2569 15:30" },
+  { id: 3, name: "Help Desk", email: "helpdesk@example.org", role: "Viewer", twoFA: false, lastLogin: "10 พ.ย. 2569 09:00" },
 ];
 
 const LOGIN_HISTORY = [
-  { time: "27 May 2026, 10:55", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "25 May 2026, 14:21", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "20 May 2026, 09:34", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "18 May 2026, 10:57", method: "AD", status: "Success", ip: "10.0.x.x" },
-  { time: "18 May 2026, 10:40", method: "AD", status: "Success", ip: "10.0.x.x" },
-  { time: "15 May 2026, 14:50", method: "EMAIL", status: "Success", ip: "10.0.x.x" },
-  { time: "14 May 2026, 09:46", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "12 May 2026, 14:54", method: "AD", status: "Success", ip: "118.x.x.x" },
-  { time: "11 May 2026, 08:20", method: "AD", status: "Success", ip: "125.x.x.x" },
-  { time: "08 May 2026, 11:18", method: "AD", status: "Success", ip: "10.0.x.x" },
+  { time: "12 Nov 2026, 10:55", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "11 Nov 2026, 14:21", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "10 Nov 2026, 09:34", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "09 Nov 2026, 10:57", method: "AD", status: "Success", ip: "10.0.x.x" },
+  { time: "08 Nov 2026, 10:40", method: "AD", status: "Success", ip: "10.0.x.x" },
+  { time: "06 Nov 2026, 14:50", method: "EMAIL", status: "Success", ip: "10.0.x.x" },
+  { time: "05 Nov 2026, 09:46", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "03 Nov 2026, 14:54", method: "AD", status: "Success", ip: "118.x.x.x" },
+  { time: "02 Nov 2026, 08:20", method: "AD", status: "Success", ip: "125.x.x.x" },
+  { time: "01 Nov 2026, 11:18", method: "AD", status: "Success", ip: "10.0.x.x" },
 ];
 
 // ─── Sub-Components ──────────────────────────────────────────────

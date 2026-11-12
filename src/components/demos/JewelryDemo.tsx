@@ -135,7 +135,7 @@ export default function JewelryDemo() {
                      </div>
                      <div>
                         <h3 className="text-gray-900 font-bold text-sm">ราคาทองคำวันนี้</h3>
-                        <p className="text-gray-400 text-[10px]">อัปเดต: 27 พ.ค. 2569 (09:25 น.)</p>
+                        <p className="text-gray-400 text-[10px]">อัปเดต: 12 พ.ย. 2569 (09:25 น.)</p>
                      </div>
                   </div>
                   

@@ -96,7 +96,7 @@ export default function SpaDemo() {
                <span className="text-[#d4af37]">Buy 1 Get 1 Free</span>
             </h2>
             <p className="text-[#e8dbce] text-sm lg:text-base max-w-lg mb-8 leading-relaxed">
-               โปรโมชั่นพิเศษต้อนรับซัมเมอร์! เมื่อซื้อแพ็กเกจสปานวดน้ำมันอโรม่า 90 นาที รับฟรีทันที บริการนวดกดจุดฝ่าเท้า 45 นาที (ตั้งแต่วันนี้ - 30 มิ.ย.)
+               โปรโมชั่นพิเศษส่งท้ายปี! เมื่อซื้อแพ็กเกจสปานวดน้ำมันอโรม่า 90 นาที รับฟรีทันที บริการนวดกดจุดฝ่าเท้า 45 นาที (ตั้งแต่วันนี้ - 30 พ.ย. 2569)
             </p>
             <div className="flex gap-4">
                <button className="bg-[#d4af37] hover:bg-white hover:text-[#453227] text-white px-8 py-3 font-bold uppercase text-sm tracking-wider transition-colors">

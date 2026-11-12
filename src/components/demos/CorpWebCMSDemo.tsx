@@ -242,7 +242,7 @@ export default function CorpWebCMSDemo() {
                      <div>
                        <span className="text-[9px] text-slate-400 bg-slate-100 px-1 rounded">ข่าวทั่วไป</span>
                        <h4 className="text-xs font-bold text-slate-800 mt-1 line-clamp-2">การประชุมขับเคลื่อนแผนยุทธศาสตร์กระทรวง ประจำปีงบประมาณ 2569</h4>
-                       <p className="text-[10px] text-slate-500 mt-1">27 พ.ค. 2569</p>
+                       <p className="text-[10px] text-slate-500 mt-1">12 พ.ย. 2569</p>
                      </div>
                    </div>
                  ))}

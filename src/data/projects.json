@@ -1,5 +1,69 @@
 [
   {
+    "id": "tpd-paypoint",
+    "category": "corporate",
+    "title": {
+      "th": "ระบบศูนย์กลางแลกเปลี่ยนคะแนนสะสม (Point Clearing House)",
+      "en": "Point Clearing House & Loyalty Exchange Platform"
+    },
+    "description": {
+      "th": "แพลตฟอร์มตัวกลางแลกเปลี่ยนคะแนนสะสมข้ามแบรนด์ (Point Clearing House) ขับเคลื่อนด้วย Quantum Fair Rate Algorithm คำนวณอัตราแลกเปลี่ยนที่เป็นธรรมแบบเรียลไทม์ เชื่อมต่อพาร์ทเนอร์ชั้นนำกว่า 36 แบรนด์",
+      "en": "Cross-brand Point Clearing House platform powered by the Quantum Fair Rate Algorithm for real-time fair point exchange across 36+ leading partner brands."
+    },
+    "tags": ["FinTech Platform", "Point Clearing House", "Quantum Fair Rate", "Real-time System"],
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "link_type": "demo",
+    "featured": true,
+    "features": {
+      "th": [
+        "ระบบตัวกลางแลกเปลี่ยนคะแนนสะสมข้ามแบรนด์ (Point Clearing House) เชื่อมต่อพาร์ทเนอร์กว่า 36 แบรนด์ รองรับสมาชิกกว่า 34.8 ล้านคน",
+        "ระบบคำนวณอัตราแลกเปลี่ยนอัจฉริยะ Quantum Fair Rate Algorithm แบบ Real-time ป้องกันการเก็งกำไรส่วนต่าง (Arbitrage) 100%",
+        "ระบบจำลองการโอนและแลกเปลี่ยนคะแนนข้ามกระเป๋าสมาชิกอย่างยืดหยุ่น รวดเร็ว และปลอดภัย",
+        "หน้าแสดงเครือข่ายพันธมิตรธุรกิจ (Partner Ecosystem) แยกตามหมวดหมู่อุตสาหกรรมอย่างชัดเจน",
+        "ออกแบบตามมาตรฐานความปลอดภัยข้อมูลและกฎหมายคุ้มครองข้อมูลส่วนบุคคล (PDPA) ครบวงจร"
+      ],
+      "en": [
+        "Cross-brand Point Clearing House connecting 36+ partner brands and serving over 34.8 million members",
+        "Real-time Quantum Fair Rate Algorithm with 100% arbitrage prevention",
+        "Interactive cross-wallet point conversion simulator with instant verification",
+        "Categorized Partner Ecosystem showcase across retail, finance, airline, and healthcare sectors",
+        "Enterprise-grade security architecture with full PDPA compliance"
+      ]
+    }
+  },
+  {
+    "id": "ethics-research",
+    "category": "dashboard",
+    "title": {
+      "th": "ระบบยื่นขอรับการพิจารณาจริยธรรมการวิจัยในมนุษย์",
+      "en": "Human Research Ethics e-Submission System"
+    },
+    "description": {
+      "th": "ระบบอิเล็กทรอนิกส์สำหรับยื่นขอรับการพิจารณาจริยธรรมการวิจัยในมนุษย์ ออกแบบมาเพื่อนักวิจัย คณาจารย์ และนักศึกษา รองรับการยื่นโครงการ ติดตามสถานะ ประเมินผลโดยคณะกรรมการ และออกใบรับรอง (COA) ออนไลน์ครบวงจร",
+      "en": "Electronic submission and review system for human research ethics designed for researchers, faculty members, and students — covering protocol submission, status tracking, committee review, and online COA issuance."
+    },
+    "tags": ["E-Submission", "Research Ethics", "Approval Workflow", "Education & Research"],
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    "link_type": "demo",
+    "featured": true,
+    "features": {
+      "th": [
+        "ระบบยื่นคำร้องและแนบเอกสารโครงร่างการวิจัยออนไลน์ ออกแบบเฉพาะสำหรับนักวิจัย คณาจารย์ และนักศึกษา",
+        "รองรับการจำแนกประเภทการพิจารณาทั้งแบบ Exemption Review, Expedited Review และ Full Board Review",
+        "ระบบติดตามสถานะโครงการวิจัยแบบ 5 ขั้นตอน (Pipeline Tracking) พร้อมแจ้งเตือนความคืบหน้าอัตโนมัติ",
+        "ระบบสำหรับอาจารย์ที่ปรึกษาและเจ้าหน้าที่ตรวจสอบความครบถ้วนของเอกสารก่อนส่งเข้าที่ประชุมคณะกรรมการ",
+        "ระบบประเมินผลสำหรับคณะกรรมการผู้ทรงคุณวุฒิ (Reviewer Console) และการออกใบรับรองจริยธรรมการวิจัย (COA) อัตโนมัติ"
+      ],
+      "en": [
+        "Online protocol submission and document checklist portal tailored for researchers, faculty members, and students",
+        "Supports Exemption Review, Expedited Review, and Full Board Review workflows",
+        "5-step real-time status pipeline tracker with automated progress notifications",
+        "Advisor endorsement and secretariat document verification workflow before committee review",
+        "Dedicated Reviewer Console for committee members and automated Certificate of Approval (COA) generation"
+      ]
+    }
+  },
+  {
     "id": "sroi-platform",
     "category": "dashboard",
     "title": { "th": "SROI Platform", "en": "SROI Platform" },

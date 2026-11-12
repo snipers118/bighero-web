@@ -36,8 +36,10 @@ import RestaurantBuffetDemo from "@/components/demos/RestaurantBuffetDemo";
 import SchoolTutorDemo from "@/components/demos/SchoolTutorDemo";
 import SchoolMusicDemo from "@/components/demos/SchoolMusicDemo";
 import SchoolInternationalDemo from "@/components/demos/SchoolInternationalDemo";
+import TPDPaypointDemo from "@/components/demos/TPDPaypointDemo";
+import EthicsResearchDemo from "@/components/demos/EthicsResearchDemo";
 
-const DEMO_PROJECTS = ["zoom-booking", "sso-system", "sroi-platform", "gov-website", "corporate-web-1", "corporate-web-2", "landing-sme", "ecommerce-swimwear", "ecommerce-tactical", "corporate-prefab", "ecommerce-culture", "corporate-transport", "ecommerce-fashion", "landing-realestate", "ecommerce-jewelry", "ecommerce-gadget", "corporate-tour", "corporate-hotel", "corporate-spa", "ecommerce-health", "landing-wickerwork", "landing-mushroom", "landing-rakmak", "landing-sap", "ecommerce-luxury", "restaurant-finedining", "restaurant-cafe", "restaurant-buffet", "school-tutor", "school-music", "school-international"];
+const DEMO_PROJECTS = ["tpd-paypoint", "ethics-research", "zoom-booking", "sso-system", "sroi-platform", "gov-website", "corporate-web-1", "corporate-web-2", "landing-sme", "ecommerce-swimwear", "ecommerce-tactical", "corporate-prefab", "ecommerce-culture", "corporate-transport", "ecommerce-fashion", "landing-realestate", "ecommerce-jewelry", "ecommerce-gadget", "corporate-tour", "corporate-hotel", "corporate-spa", "ecommerce-health", "landing-wickerwork", "landing-mushroom", "landing-rakmak", "landing-sap", "ecommerce-luxury", "restaurant-finedining", "restaurant-cafe", "restaurant-buffet", "school-tutor", "school-music", "school-international"];
 
 export default function ProjectDetail() {
   const params = useParams();
@@ -83,7 +85,15 @@ export default function ProjectDetail() {
 
       {/* Interactive Demo or Static Mockup */}
       <section className={`mx-auto mb-20 animate-fade-in-up animation-delay-200 ${DEMO_PROJECTS.includes(project.id) ? "w-full max-w-none px-0" : "max-w-5xl px-6"}`}>
-        {project.id === "zoom-booking" ? (
+        {project.id === "tpd-paypoint" ? (
+          <div className="max-w-6xl mx-auto px-6">
+            <TPDPaypointDemo />
+          </div>
+        ) : project.id === "ethics-research" ? (
+          <div className="max-w-6xl mx-auto px-6">
+            <EthicsResearchDemo />
+          </div>
+        ) : project.id === "zoom-booking" ? (
           <ZoomBookingDemo />
         ) : project.id === "sso-system" ? (
           <>

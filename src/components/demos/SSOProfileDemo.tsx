@@ -3,16 +3,16 @@
 import { useState, useRef } from "react";
 
 const LOGIN_HISTORY = [
-  { time: "27 May 2026, 10:55", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "25 May 2026, 14:21", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "20 May 2026, 09:34", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "18 May 2026, 10:57", method: "AD", status: "Success", ip: "10.0.x.x" },
-  { time: "18 May 2026, 10:40", method: "AD", status: "Success", ip: "10.0.x.x" },
-  { time: "15 May 2026, 14:50", method: "EMAIL", status: "Success", ip: "10.0.x.x" },
-  { time: "14 May 2026, 09:46", method: "AD", status: "Success", ip: "192.168.x.x" },
-  { time: "12 May 2026, 14:54", method: "AD", status: "Success", ip: "118.x.x.x" },
-  { time: "11 May 2026, 08:20", method: "AD", status: "Success", ip: "125.x.x.x" },
-  { time: "08 May 2026, 11:18", method: "AD", status: "Success", ip: "10.0.x.x" },
+  { time: "12 Nov 2026, 10:55", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "11 Nov 2026, 14:21", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "10 Nov 2026, 09:34", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "09 Nov 2026, 10:57", method: "AD", status: "Success", ip: "10.0.x.x" },
+  { time: "08 Nov 2026, 10:40", method: "AD", status: "Success", ip: "10.0.x.x" },
+  { time: "06 Nov 2026, 14:50", method: "EMAIL", status: "Success", ip: "10.0.x.x" },
+  { time: "05 Nov 2026, 09:46", method: "AD", status: "Success", ip: "192.168.x.x" },
+  { time: "03 Nov 2026, 14:54", method: "AD", status: "Success", ip: "118.x.x.x" },
+  { time: "02 Nov 2026, 08:20", method: "AD", status: "Success", ip: "125.x.x.x" },
+  { time: "01 Nov 2026, 11:18", method: "AD", status: "Success", ip: "10.0.x.x" },
 ];
 
 export default function SSOProfileDemo() {
@@ -44,9 +44,9 @@ export default function SSOProfileDemo() {
   const [profileRevokedApps, setProfileRevokedApps] = useState<number[]>([]);
 
   const profileAuthApps = [
-    { id: 1, name: "test with ci3", date: "25 May 2026, 14:21", browser: "Microsoft Edge บน Windows", ip: "192.168.x.x", initial: "T", color: "bg-slate-400" },
-    { id: 2, name: "Zoom Booking", date: "27 May 2026, 10:55", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "N", color: "bg-blue-500" },
-    { id: 3, name: "Zoom Booking", date: "27 May 2026, 11:21", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "N", color: "bg-blue-500" },
+    { id: 1, name: "test with ci3", date: "11 Nov 2026, 14:21", browser: "Microsoft Edge บน Windows", ip: "192.168.x.x", initial: "T", color: "bg-slate-400" },
+    { id: 2, name: "Zoom Booking", date: "12 Nov 2026, 10:55", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "N", color: "bg-blue-500" },
+    { id: 3, name: "Zoom Booking", date: "12 Nov 2026, 11:21", browser: "Google Chrome บน Windows", ip: "192.168.x.x", initial: "N", color: "bg-blue-500" },
   ];
 
   return (
