@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import projects from "@/data/projects.json";
+import JsonLd from "@/components/JsonLd";
 
 /* ===== Standards Data will be pulled from locales ===== */
 
@@ -90,10 +91,7 @@ export default function HomePage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <JsonLd data={faqJsonLd} />
       {/* ===== HERO SECTION ===== */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Dynamic Background with Glowing Orbs */}

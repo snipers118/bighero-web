@@ -4,8 +4,41 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import projects from "@/data/projects.json";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, ORG_ID } from "@/lib/site";
 
 type FilterType = "all" | "corporate" | "dashboard" | "api" | "landing" | "ecommerce";
+
+const portfolioJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE_URL}/portfolio#page`,
+      url: `${SITE_URL}/portfolio`,
+      name: "ผลงานรับทำเว็บไซต์และระบบ (Portfolio) — BigHero Studio",
+      inLanguage: "th-TH",
+      publisher: { "@id": ORG_ID },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: projects.length,
+        itemListElement: projects.map((p, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: `${SITE_URL}/portfolio/${p.id}`,
+          name: p.title.th,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "หน้าแรก", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "ผลงาน", item: `${SITE_URL}/portfolio` },
+      ],
+    },
+  ],
+};
 
 export default function PortfolioPage() {
   const { t, locale } = useLanguage();
@@ -20,6 +53,7 @@ export default function PortfolioPage() {
 
   return (
     <>
+      <JsonLd data={portfolioJsonLd} />
       {/* Hero */}
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-primary-50/20 to-white" />

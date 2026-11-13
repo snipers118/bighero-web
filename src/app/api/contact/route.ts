@@ -1,6 +1,19 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+function escapeHtml(value: unknown): string {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function sanitizeHeader(value: unknown): string {
+  return String(value ?? "").replace(/[\r\n]+/g, " ").trim().slice(0, 200);
+}
+
 export async function POST(request: Request) {
   try {
     const { name, email, phone, budget, message, turnstileToken } = await request.json();
@@ -56,11 +69,13 @@ export async function POST(request: Request) {
     });
 
     // Email content
+    const safeName = sanitizeHeader(name);
+    const safeEmail = sanitizeHeader(email);
     const mailOptions = {
       from: user,
       to: "bighero.thailand@gmail.com", // Send to your company email
-      replyTo: email,
-      subject: `New Contact from ${name} - BigHero Studio`,
+      replyTo: safeEmail,
+      subject: `New Contact from ${safeName} - BigHero Studio`,
       text: `
         Name: ${name}
         Email: ${email}
@@ -72,13 +87,13 @@ export async function POST(request: Request) {
       `,
       html: `
         <h3>New Contact Request</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-        <p><strong>Budget:</strong> ${budget || "Not provided"}</p>
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</p>
+        <p><strong>Budget:</strong> ${escapeHtml(budget || "Not provided")}</p>
         <br />
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
+        <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
       `,
     };
 
